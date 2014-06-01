@@ -55,13 +55,6 @@ table {
 
 /* blog.mgrossklaus.de */
 
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://themes.googleusercontent.com/static/fonts/robotoslab/v3/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
-}
-
 html,
 body {
   min-height: 100%;
@@ -71,7 +64,7 @@ html {
   border: .625rem solid #fff;
 }
 body {
-  font: .925rem/1.5em 'Roboto Slab', Georgia, Times, serif;
+  font: .925rem/1.5em Georgia, Times, serif;
   color: #444;
   width: 100%;
   max-width: 62.5rem;
