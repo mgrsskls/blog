@@ -18,3 +18,6 @@ sitemap:
     exclude:
       - "/feed.xml"
       - "/css/styles.scss"
+
+gems:
+  - jekyll-sitemap
