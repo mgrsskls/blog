@@ -1,4 +1,4 @@
-_site
+_site/
+_drafts/
 ._*
-.DS_*
-_drafts
+.DS_Store
