@@ -1,0 +1,20 @@
+# Site settings
+title: Blog about frontend development by Michael Großklaus
+maintitle: blog.mgrossklaus.de
+subtitle: about html, css, javascript and frontend performance
+email: mail@mgrossklaus.de
+description: "Dealing with HTML, CSS, JavaScript and frontend performance. More about Michael Großklaus at www.mgrossklaus.de"
+baseurl: "/blog"
+url: "http://blog.mgrossklaus.de"
+username: "mgrossklaus"
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title
+sass:
+    style: :compressed
+
+sitemap:
+    exclude:
+      - "/feed.xml"
+      - "/css/styles.scss"

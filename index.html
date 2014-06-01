@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="content">
+  <article class="content__main" role="main">
+    <h3>Recent posts</h3>
+    <ul class="posts">
+      {% for post in site.posts %}
+        <li class="posts-item">
+          <a class="posts-item__link" href="{{ post.url | prepend: site.baseurl }}">
+            <span class="posts-item__date date">{{ post.date | date: "%Y/%m/%-d " }}</span>
+            <span class="posts-item__title">{{ post.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
+
+  {% include aside.html %}
+</div>
