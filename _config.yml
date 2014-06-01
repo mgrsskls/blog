@@ -11,6 +11,8 @@ username: "mgrossklaus"
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:day/:title
+sass:
+    style: :compressed
 
 sitemap:
     exclude:
