@@ -116,6 +116,7 @@ a:hover svg circle {
 }
 .site-title__image {
   height: 4rem;
+  width: 4rem;
   -webkit-border-radius: 4rem;
   -moz-border-radius: 4rem;
   -ms-border-radius: 4rem;
