@@ -5,6 +5,7 @@ layout: default
 <div class="content">
   <article class="content__main" role="main">
     <h3>Recent posts</h3>
+    {% if site.posts.size > 0 %}
     <ul class="posts">
       {% for post in site.posts %}
         <li class="posts-item">
@@ -15,6 +16,9 @@ layout: default
         </li>
       {% endfor %}
     </ul>
+    {% else %}
+    <p>No posts available.</p>
+    {% endif %}
   </article>
 
   {% include aside.html %}
