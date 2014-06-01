@@ -5,7 +5,7 @@ subtitle: about html, css, javascript and frontend performance
 email: mail@mgrossklaus.de
 description: "Dealing with HTML, CSS, JavaScript and frontend performance. More about Michael Großklaus at www.mgrossklaus.de"
 baseurl: ""
-url: "https://mgrossklaus.github.io/blog"
+url: "http://blog.mgrossklaus.de"
 username: "mgrossklaus"
 
 # Build settings
