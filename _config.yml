@@ -12,12 +12,12 @@ username: "mgrossklaus"
 markdown: kramdown
 permalink: /:year/:month/:day/:title
 sass:
-    style: :compressed
+  style: :compressed
 
 sitemap:
-    exclude:
-      - "/feed.xml"
-      - "/css/styles.scss"
+  exclude:
+    - "/feed.xml"
+    - "/css/styles.scss"
 
 gems:
   - jekyll-sitemap
