@@ -17,7 +17,7 @@ html {
   border: .625rem solid #fff;
 }
 body {
-  font: .925rem/1.5em 'Roboto Slab', Georgia, Times, serif;
+  font: .925rem/1.6em 'Roboto Slab', Georgia, Times, serif;
   color: #444;
   width: 100%;
   max-width: 62.5rem;
@@ -332,5 +332,6 @@ a:hover .footer__icon--github {
   }
   .footer__item {
     float: none;
+    margin: 0 0 .5rem;
   }
 }
