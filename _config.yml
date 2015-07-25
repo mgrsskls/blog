@@ -1,12 +1,14 @@
 # Site settings
 title: Blog about frontend development by Michael Großklaus
 maintitle: blog.mgrossklaus.de
-subtitle: about html, css, javascript and frontend performance
+subtitle: about html, css and javascript
 email: mail@mgrossklaus.de
-description: "Dealing with HTML, CSS, JavaScript and frontend performance. More about Michael Großklaus at www.mgrossklaus.de"
-baseurl: ""
+description: "Dealing with HTML, CSS and JavaScript. More about Michael Großklaus at www.mgrossklaus.de"
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://blog.mgrossklaus.de"
 username: "mgrossklaus"
+twitter_username: mgrossklaus
+github_username:  mgrossklaus
 
 # Build settings
 markdown: kramdown

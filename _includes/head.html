@@ -1,13 +1,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="dns-prefetch" href="https://themes.googleusercontent.com">
+    <link rel="dns-prefetch" href="http://fonts.gstatic.com">
     <title>{% if page.title %}{{ page.title }} &ndash; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <style>
-      {% include styles.css %}
-    </style>
+    <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}">
 </head>
