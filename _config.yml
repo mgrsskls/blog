@@ -15,11 +15,3 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title
 sass:
   style: :compressed
-
-sitemap:
-  exclude:
-    - "/feed.xml"
-    - "/css/styles.scss"
-
-gems:
-  - jekyll-sitemap
