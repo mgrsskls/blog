@@ -4,8 +4,8 @@ maintitle: blog.mgrossklaus.de
 subtitle: about html, css and javascript
 email: mail@mgrossklaus.de
 description: "Dealing with HTML, CSS and JavaScript. More about Michael Großklaus at www.mgrossklaus.de"
-baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "https://mgrossklaus.github.io"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.mgrossklaus.de"
 username: "mgrossklaus"
 twitter_username: mgrossklaus
 github_username:  mgrossklaus
