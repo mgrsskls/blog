@@ -1,11 +1,6 @@
 <header class="header">
-  <h1 class="site-title">
-    <a class="site-title__link" href="{{ site.baseurl }}/">
-      <img class="site-title__image" src="{{ "/assets/mg.svg" | prepend: site.baseurl }}" alt="Michael Großklaus">
-      {{ site.title }}
-    </a>
-  </h1>
-  <h2 class="site-subtitle">
-    {{ site.subtitle }}
-  </h2>
+  <a class="header__link" href="{{ site.baseurl }}/" >
+    <h1 class="header__title" itemprop="author">{{ site.title }}</h1>
+    <h2 class="header__subtitle">{{ site.subtitle }}</h2>
+  </a>
 </header>

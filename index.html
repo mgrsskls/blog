@@ -3,14 +3,14 @@ layout: default
 ---
 
 <div class="content">
-  <article class="content__main" role="main">
+  <div class="content__section content__section--main" role="main">
     <h3>Recent posts</h3>
     {% if site.posts.size > 0 %}
     <ul class="posts">
       {% for post in site.posts %}
         <li class="posts-item">
           <a class="posts-item__link" href="{{ post.url | prepend: site.baseurl }}">
-            <span class="posts-item__date date">{{ post.date | date: "%Y/%m/%-d " }}</span>
+            <time class="posts-item__date date" datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date: "%Y/%m/%-d " }}</time>
             <span class="posts-item__title">{{ post.title }}</span>
           </a>
         </li>
@@ -19,7 +19,7 @@ layout: default
     {% else %}
     <p>No posts available.</p>
     {% endif %}
-  </article>
+  </div>
 
   {% include aside.html %}
 </div>

@@ -2,17 +2,14 @@
 layout: default
 ---
 
-<article role="main" class="content">
-  <div class="page-head">
-    <h1 class="post__title">{{ page.title }}</h1>
-    <p class="post__date date">{{ page.date | date: "%Y/%m/%-d " }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </div>
-  <div class="post__content">
+<article class="content__section content__section--main post" item itemscope="BlogPosting">
+  <h1 class="post__title"><time class="post__date date" datetime="{{ page.date | date: '%Y-%m-%-d' }}">{{ page.date | date: "%Y/%m/%-d " }}</time> <span itemprop="title">{{ page.title }}</span></h1>
+  <div class="post__content" itemprop="articleBody">
     {{ content }}
   </div>
 
-  <div class="post__footer">
-    {% include tweet.html %}
-    <a class="go-back secondary-content" href="{{ site.baseurl }}/">back</a>
-  </div>
+  <ul class="post__footer">
+    <li><a class="go-back secondary-content" href="{{ site.baseurl }}/">back</a></li>
+    <li><a class="icon-link icon-link--twitter" href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}" target="_blank">Tweet this</a></li>
+  </ul>
 </article>
