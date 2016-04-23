@@ -1,20 +1,6 @@
-@media (max-width: 48rem) {
+@media (max-width: 700px) {
   body {
-    padding: 4rem 3rem 0;
-  }
-  .footer__item {
-    float: none;
-    margin: 0 0 .5em;
-  }
-}
-
-@media (max-width: 36rem) {
-  .header__link {
-    font-size: 9vw;
-
-    &::before {
-      margin: 0 auto;
-    }
+    padding: 3rem 2.5rem 0;
   }
   .header__link::before,
   .header__title,
@@ -22,6 +8,19 @@
     float: none;
     text-align: center;
     line-height: 1.5em;
+  }
+  .header__link {
+    font-size: 7vw;
+
+    &::before {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header__link {
+    font-size: 9vw;
   }
   .footer__item {
     float: none;
