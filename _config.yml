@@ -1,9 +1,8 @@
 # Site settings
-title: Blog about frontend development by Michael Großklaus
-maintitle: blog.mgrossklaus.de
-subtitle: about html, css and javascript
+title: Michael Großklaus
+subtitle: html / css / javascript / performance / usability
 email: mail@mgrossklaus.de
-description: "Dealing with HTML, CSS and JavaScript. More about Michael Großklaus at www.mgrossklaus.de"
+description: "Dealing with html, css, javascript, usability and performance. More about Michael Großklaus at www.mgrossklaus.de"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://blog.mgrossklaus.de"
 username: "mgrossklaus"

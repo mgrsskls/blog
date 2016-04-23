@@ -2,7 +2,7 @@
 
   <ul class="footer__links">
     <li class="footer__item">
-      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+      <a class="footer__link" href="{{ "/feed.xml" | prepend: site.baseurl }}">
         <svg version="1.1" class="footer__icon footer__icon--rss" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
           <g transform="scale(0.065)">
@@ -15,7 +15,7 @@
       </a>
     </li>
     <li class="footer__item">
-      <a href="https://github.com/{{ site.username }}" target="_blank">
+      <a class="footer__link" href="https://github.com/{{ site.username }}" target="_blank">
         <svg version="1.1" class="footer__icon footer__icon--github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
           <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
@@ -32,7 +32,7 @@
       </a>
     </li>
     <li class="footer__item">
-      <a href="https://twitter.com/{{ site.username }}" target="_blank">
+      <a class="footer__link" href="https://twitter.com/{{ site.username }}" target="_blank">
         <svg version="1.1" class="footer__icon footer__icon--twitter twitter-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
           <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -47,7 +47,7 @@
       </a>
     </li>
     <li class="footer__item footer__item--page">
-      <a class="foter__link" href="{{ "/impressum" | prepend: site.baseurl }}">Impressum</a>
+      <a class="footer__link" class="foter__link" href="{{ "/impressum" | prepend: site.baseurl }}">Impressum</a>
     </li>
   </ul>
 
