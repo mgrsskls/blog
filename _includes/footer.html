@@ -2,13 +2,13 @@
 
   <ul class="footer__links">
     <li class="footer__item">
-      <a class="footer__link icon-link icon-link--rss" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+      <a class="footer__link icon-link icon-link--rss" title="Subscribe the RSS feed" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
     </li>
     <li class="footer__item">
-      <a class="footer__link icon-link icon-link--github" href="https://github.com/{{ site.username }}" target="_blank">github.com/{{ site.username }}</a>
+      <a class="footer__link icon-link icon-link--github" title="{{ site.title }} at GitHub" href="https://github.com/{{ site.username }}" target="_blank">github.com/{{ site.username }}</a>
     </li>
     <li class="footer__item">
-      <a class="icon-link icon-link--twitter footer__link" href="https://twitter.com/{{ site.username }}" target="_blank">twitter.com/{{ site.username }}</a>
+      <a class="icon-link icon-link--twitter footer__link" title="{{ site.title }} at twitter" href="https://twitter.com/{{ site.username }}" target="_blank">twitter.com/{{ site.username }}</a>
     </li>
   </ul>
 
