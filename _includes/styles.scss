@@ -211,6 +211,14 @@ pre,
     left: -0.25em;
     top: .15em;
   }
+
+  &:hover,
+  &:focus {
+    &::before {
+      -webkit-filter: brightness(.6);
+      filter: brightness(.6);
+    }
+  }
 }
 .icon-link--twitter {
   &::before {
