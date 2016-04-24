@@ -149,6 +149,13 @@ code {
 }
 code.highlighter-rouge {
   color: #527286;
+  padding: .15em .2em;
+}
+.highlight,
+code.highlighter-rouge {
+  border-radius: .2em;
+  background: #fff;
+  border: 1px solid #ddd;
 }
 p,
 ul,
