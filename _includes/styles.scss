@@ -170,6 +170,7 @@ code.highlighter-rouge {
   border-radius: .2em;
   background: #fff;
   border: 1px solid #ddd;
+  clear: both;
 }
 p,
 ul,
@@ -216,6 +217,24 @@ pre,
     content: '';
     display: block;
     clear: both;
+  }
+}
+
+.image-left {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+
+  + {
+    p,
+    ul,
+    ol {
+      &::before {
+        content: '';
+        display: block;
+        width: 15em;
+        overflow: hidden;
+      }
+    }
   }
 }
 
