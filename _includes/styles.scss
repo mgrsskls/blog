@@ -29,10 +29,24 @@ a {
 
   &:hover,
   &:focus {
-    color: #a01f53;
+    color: #999;
     outline: none;
   }
 }
+
+@mixin selection {
+  background: #1c3e4f;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  @include selection;
+}
+::-moz-selection {
+  @include selection;
+}
+
 
 /* +header */
 .header {
@@ -98,7 +112,7 @@ a {
     .posts-item__title {
       background: linear-gradient(currentColor, currentColor) no-repeat;
       background-size: 100% 1px;
-      background-position: 0 1.15em;
+      background-position: 0 1.175em;
       text-shadow: -.15em 0 #f0f0f0, .15em 0 #f0f0f0;
     }
   }
@@ -189,11 +203,25 @@ pre,
     float: left;
   }
 
+  a {
+    color: #999;
+
+    &:hover,
+    &:focus {
+      color: #444;
+    }
+  }
+
   &::after {
     content: '';
     display: block;
     clear: both;
   }
+}
+
+@mixin filter($value) {
+  -webkit-filter: $value;
+  filter: $value;
 }
 
 /* +icon-link */
@@ -215,8 +243,7 @@ pre,
   &:hover,
   &:focus {
     &::before {
-      -webkit-filter: brightness(.6);
-      filter: brightness(.6);
+      @include filter(brightness(.6));
     }
   }
 }
