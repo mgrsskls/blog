@@ -7,14 +7,12 @@ layout: default
   {% if site.posts.size > 0 %}
   <ul class="posts">
     {% for post in site.posts %}
-      {% unless post.draft %}
       <li class="posts-item">
         <a class="posts-item__link" href="{{ post.url | prepend: site.baseurl }}">
           <time class="posts-item__date date" datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date: "%Y/%m/%-d " }}</time>
           <span class="posts-item__title">{{ post.title }}</span>
         </a>
       </li>
-      {% endunless %}
     {% endfor %}
   </ul>
   {% else %}
