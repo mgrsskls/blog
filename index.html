@@ -2,15 +2,15 @@
 layout: default
 ---
 
-<main class="content__section content__section--main">
+<main class="Content-section">
   <h3>Recent posts</h3>
   {% if site.posts.size > 0 %}
-  <ul class="posts">
+  <ul class="Posts">
     {% for post in site.posts %}
-      <li class="posts-item">
-        <a class="posts-item__link" href="{{ post.url | prepend: site.baseurl }}">
-          <time class="posts-item__date date" datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date: "%Y/%m/%-d " }}</time>
-          <span class="posts-item__title">{{ post.title }}</span>
+      <li class="Posts-item">
+        <a class="PostsItem" href="{{ post.url | prepend: site.baseurl }}">
+          <time class="PostsItem-date date" datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date: "%Y/%m/%-d " }}</time>
+          <span class="PostsItem-title">{{ post.title }}</span>
         </a>
       </li>
     {% endfor %}

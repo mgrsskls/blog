@@ -1,0 +1,26 @@
+<form class="CommentForm" method="POST" action="https://api.staticman.net/v2/entry/{{ site.github_username }}/blog/gh-pages/comments">
+  <fieldset>
+    <legend class="CommentForm-titlte">Leave a comment</legend>
+    <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
+    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+
+    <div class="CommentForm-inputs">
+      <div class="CommentForm-input Input">
+        <label class="Input-label" for="Comment-form-name">Name</label>
+        <input id="Comment-form-name" name="fields[name]" type="text" class="Input-item">
+      </div>
+
+      <div class="CommentForm-input">
+        <label class="Input-label" for="Comment-form-url">URL</label>
+        <input id="Comment-form-url" name="fields[url]" type="url" class="Input-item">
+      </div>
+    </div>
+
+    <div class="CommentForm-input">
+      <label class="Input-label" for="Comment-form-message">Message</label>
+      <textarea id="Comment-form-message" name="fields[message]" class="Input-item Input-item--textarea"></textarea>
+    </div>
+
+    <button class="Button" type="submit">Submit</button>
+  </fieldset>
+</form>

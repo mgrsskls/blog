@@ -1,0 +1,13 @@
+<h3>Comments</h3>
+<ul class="Comments">
+  {% for comment in site.data.comments[page.slug] | sort %}
+    {% assign date = comment[1].date  %}
+    {% assign name = comment[1].name  %}
+    {% assign message = comment[1].message  %}
+    {% assign url = comment[1].url  %}
+    {% assign id = comment[1]._id  %}
+    <li class="Comments-item" id="#comment-{{ id }}">
+      {% include comment.html date=date name=name message=message url=url id=id %}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,16 +1,18 @@
-@media (max-width: 700px) {
-  body {
-    padding: 3rem 2.5rem 0;
+@media (max-width: 43.75em) {
+  :root {
+    --spacing: 3rem;
   }
-  .header__link::before,
-  .header__title,
-  .header__subtitle {
+
+  .Header-link::before,
+  .Header-title,
+  .Header-subtitle {
     float: none;
     text-align: center;
     line-height: 1.5em;
   }
-  .header__link {
-    font-size: 7vw;
+
+  .Header-link {
+    font-size: 3.5rem;
 
     &::before {
       margin: 0 auto;
@@ -18,11 +20,8 @@
   }
 }
 
-@media (max-width: 480px) {
-  .header__link {
-    font-size: 9vw;
-  }
-  .footer__item {
+@media (max-width: 30em) {
+  .Footer-item {
     float: none;
 
     &:not(:last-child) {

@@ -1,5 +1,5 @@
 comments:
-  allowedFields: ["name", "email", "url", "message"]
+  allowedFields: ["name", "url", "message"]
   branch: "gh-pages"
   commitMessage: "New comment"
   filename: "entry{@timestamp}"
