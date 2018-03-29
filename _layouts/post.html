@@ -2,14 +2,26 @@
 layout: default
 ---
 
-<article class="content__section content__section--main post" item itemscope="BlogPosting">
-  <h1 class="post__title"><time class="post__date date" datetime="{{ page.date | date: '%Y-%m-%-d' }}">{{ page.date | date: "%Y/%m/%-d " }}</time> <span itemprop="title">{{ page.title }}</span></h1>
-  <div class="post__content" itemprop="articleBody">
-    {{ content }}
-  </div>
+<main>
+  <article class="content__section content__section--main post" item itemscope="BlogPosting">
+    <h1 class="post__title"><time class="post__date date" datetime="{{ page.date | date: '%Y-%m-%-d' }}">{{ page.date | date: "%Y/%m/%-d " }}</time> <span itemprop="title">{{ page.title }}</span></h1>
+    <div class="post__content" itemprop="articleBody">
+      {{ content }}
+    </div>
 
-  <ul class="post__footer">
-    <li><a class="icon-link icon-link--back" href="{{ site.baseurl }}/"><span class="icon-link__text">back</span></a></li>
-    <li><a class="icon-link icon-link--twitter" href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}" target="_blank"><span class="icon-link__text">Tweet this</span></a></li>
-  </ul>
-</article>
+    <ul class="post__footer">
+      <li><a class="icon-link icon-link--back" href="{{ site.baseurl }}/"><span class="icon-link__text">back</span></a></li>
+      <li><a class="icon-link icon-link--twitter" href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}" target="_blank"><span class="icon-link__text">Tweet this</span></a></li>
+    </ul>
+  </article>
+
+  <form method="POST" action="https://api.staticman.net/v2/entry/{{ site.github_username }}/blog/gh-pages/comments">
+    <input name="options[redirect]" type="hidden" value="{{ page.url }}">
+    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+    <label><input name="fields[name]" type="text">Name</label>
+    <label><input name="fields[email]" type="email">E-mail</label>
+    <label><textarea name="fields[message]"></textarea>Message</label>
+
+    <button type="submit">Submit</button>
+  </form>
+</main>

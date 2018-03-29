@@ -5,16 +5,16 @@
       <a class="footer__link icon-link icon-link--rss" title="Subscribe the RSS feed" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="icon-link__text">RSS</span></a>
     </li>
     <li class="footer__item">
-      <a class="footer__link icon-link icon-link--github" title="{{ site.title }} at GitHub" href="https://github.com/{{ site.username }}" target="_blank"><span class="icon-link__text">github.com/{{ site.username }}</span></a>
+      <a class="footer__link icon-link icon-link--github" title="{{ site.title }} at GitHub" href="https://github.com/{{ site.username }}" rel="noopener" target="_blank"><span class="icon-link__text">github.com/{{ site.username }}</span></a>
     </li>
     <li class="footer__item">
-      <a class="icon-link icon-link--twitter footer__link" title="{{ site.title }} at twitter" href="https://twitter.com/{{ site.username }}" target="_blank"><span class="icon-link__text">twitter.com/{{ site.username }}</span></a>
+      <a class="icon-link icon-link--twitter footer__link" title="{{ site.title }} at twitter" href="https://twitter.com/{{ site.username }}" rel="noopener" target="_blank"><span class="icon-link__text">twitter.com/{{ site.username }}</span></a>
     </li>
   </ul>
 
   <p>
-    This blog runs on <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and is hosted on <a href="http://pages.github.com">GitHub Pages</a>.<br>
-    You can have a look at its <a href="https://github.com/mgrossklaus/blog" target="_blank">source code</a>.
+    This blog runs on <a href="https://jekyllrb.com/" rel="noopener" target="_blank">Jekyll</a> and is hosted on <a href="http://pages.github.com">GitHub Pages</a>.<br>
+    You can have a look at its <a href="https://github.com/mgrossklaus/blog" rel="noopener" target="_blank">source code</a>.
   </p>
 
   <small><a class="footer__link" href="{{ "/legal-notice" | prepend: site.baseurl }}">Legal notice</a></small>

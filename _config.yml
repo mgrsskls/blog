@@ -4,10 +4,10 @@ subtitle: html / css / javascript / performance / usability
 email: mail@mgrossklaus.de
 description: "Dealing with html, css, javascript, usability and performance. More about Michael Großklaus at www.mgrossklaus.de"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://blog.mgrossklaus.de"
+url: "https://blog.mgrossklaus.de"
 username: "mgrossklaus"
 twitter_username: mgrossklaus
-github_username:  mgrossklaus
+github_username:  mgrsskls
 
 # Build settings
 markdown: kramdown
