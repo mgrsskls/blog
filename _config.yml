@@ -1,8 +1,8 @@
 # Site settings
 title: Michael Großklaus
-subtitle: html / css / javascript / performance / usability / accessability
+subtitle: html / css / javascript / performance / usability / accessibility
 email: mail@mgrossklaus.de
-description: "Dealing with html, css, javascript, usability and performance. More about Michael Großklaus at www.mgrossklaus.de"
+description: "Dealing with html, css, javascript, usability, performance and accessibility. More about Michael Großklaus at www.mgrossklaus.de"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://blog.mgrossklaus.de"
 username: "mgrossklaus"

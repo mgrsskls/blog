@@ -2,10 +2,14 @@
 layout: default
 ---
 
-<main>
+<main class="Main">
   <article class="Content-section Post" item itemscope="BlogPosting">
     <h2 class="Post-title">
-      <a rel="nofollower" href="{{ page.url | absolute_url }}" class="date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y/%m/%-d" }}</time></a>
+      <a rel="nofollower" href="{{ page.url | absolute_url }}" class="date"
+        ><time datetime="{{ page.date | date_to_xmlschema }}"
+          >{{ page.date | date: "%Y/%m/%-d" }}</time
+        ></a
+      >
       <span itemprop="title">{{ page.title }}</span>
     </h2>
     <div class="Post-content" itemprop="articleBody">
@@ -14,13 +18,18 @@ layout: default
 
     <ul class="Post-footer">
       <li>
-        <a class="IconLink IconLink--twitter" href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}" target="_blank" rel="noopener"><span class="IconLink-text">Tweet this</span></a>
+        <a
+          class="IconLink IconLink--twitter"
+          href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}"
+          target="_blank"
+          rel="noopener"
+          ><span class="IconLink-text">Tweet this</span></a
+        >
       </li>
     </ul>
   </article>
 
   <div class="Content-section">
-    {% include comments.html %}
-    {% include comment_form.html %}
+    {% include comments.html %} {% include comment_form.html %}
   </div>
 </main>
