@@ -1,31 +1,40 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
 
-<main class="Main">
-  <article class="Content-section Post" item itemscope="BlogPosting">
-    <h2 class="Post-title">
-      <a rel="nofollower" href="{{ page.url | absolute_url }}" class="date"
-        ><time datetime="{{ page.date | date_to_xmlschema }}"
-          >{{ page.date | date: "%Y/%m/%-d" }}</time
-        ></a
-      >
-      <span itemprop="title">{{ page.title }}</span>
-    </h2>
-    <div class="Post-content" itemprop="articleBody">
-      {{ content }}
-    </div>
+  <body>
+    {% include nav.html current="blog" %}
 
-    <ul class="Post-footer">
-      <li>
-        <a
-          class="IconLink IconLink--twitter"
-          href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}"
-          target="_blank"
-          rel="noopener"
-          ><span class="IconLink-text">Tweet this</span></a
-        >
-      </li>
-    </ul>
-  </article>
-</main>
+    <main class="Content Blog">
+      {% include header.html current="blog" %}
+
+      <article class="Post Section">
+        <div class="Post-heading">
+          <h1>{{ page.title }}</h1>
+          <time
+            class="Post-date Date"
+            datetime="{{ page.date | date_to_xmlschema }}"
+          >
+            {{ page.date | date: "%Y/%m/%-d" }}
+          </time>
+        </div>
+        <div class="Post-content Copy">
+          {{ content }}
+        </div>
+
+        <ul class="Post-footer">
+          <li>
+            <a
+              class="IconLink IconLink--twitter"
+              href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}"
+              target="_blank"
+              rel="noopener"
+              ><span class="IconLink-text">Tweet this</span></a
+            >
+          </li>
+        </ul>
+      </article>
+      {% include footer.html %}
+    </main>
+  </body>
+</html>

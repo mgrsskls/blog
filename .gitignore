@@ -3,3 +3,4 @@ _drafts/
 ._*
 .DS_Store
 .sass-cache/
+node_modules/

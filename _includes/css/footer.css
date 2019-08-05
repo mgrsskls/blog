@@ -1,0 +1,16 @@
+.Footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Footer-item {
+  padding: 0 0 1rem;
+}
+
+.Footer-item:not(:last-child) {
+  margin-right: 1.5em;
+}
+
+.Footer-copy {
+  margin-top: 1.75em;
+}

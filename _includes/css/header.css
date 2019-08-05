@@ -1,0 +1,171 @@
+.Header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--fontSizeRem);
+  justify-content: center;
+  padding: calc(var(--headerSpacing) - 2rem) 0 var(--headerSpacing);
+}
+
+.Header--blog {
+  --headerSpacing: calc(var(--spacing) / 2);
+}
+
+.Header:not(.Header--blog) {
+  --headerSpacing: var(--spacing);
+}
+
+.Header-title,
+.Header-image {
+  margin-top: 2rem;
+}
+
+.Header-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.Header-titleItem {
+  padding: 0 0.25em;
+  position: relative;
+}
+
+.Header-titleItem::before {
+  background: #f0f0f0;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: skewX(-10deg) rotate(-1deg);
+  z-index: -1;
+}
+
+.Header-titleItem--name {
+  color: var(--color-primary);
+}
+
+.Header-titleItem--occupation {
+  color: var(--color-secondary);
+  font-size: 0.6em;
+  margin: 0.25em 0 0;
+}
+
+.Header-image {
+  --size: 4.761904762em;
+
+  border-radius: 50%;
+  display: block;
+  height: var(--size);
+  order: -1;
+  overflow: hidden;
+  position: relative;
+  width: var(--size);
+}
+
+.Header-image::after {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  mix-blend-mode: screen;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.Header--blog .Header-title,
+.Header--blog .Header-image {
+  margin-left: var(--headerSpacing-x);
+  margin-right: var(--headerSpacing-x);
+}
+
+.Header-imageElement {
+  background-size: 100%;
+  color: transparent;
+  display: block;
+  filter: contrast(1.25) sepia(0.15);
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 30em) {
+  .Header {
+    --fontSize: 3.2;
+    --fontSizeRem: calc(var(--fontSize) * 1rem);
+    --headerSpacing-x: 0.5rem;
+  }
+
+  .Header--blog .Header-title {
+    align-items: flex-start;
+    font-size: 0.75em;
+  }
+
+  .Header--blog .Header-image {
+    --size: 2em;
+  }
+
+  .Header:not(.Header--blog) .Header-title {
+    align-items: center;
+  }
+
+  .Header:not(.Header--blog) .Header-image {
+    --size: 4em;
+  }
+}
+
+@media (min-width: 30.025em) {
+  .Header {
+    --fontSizeRem: calc(var(--fontSize) * 1rem);
+    --headerSpacing-x: 1rem;
+  }
+
+  .Header--blog {
+    --fontSize: 2.4;
+  }
+
+  .Header:not(.Header--blog) {
+    --fontSize: 4.2;
+
+    justify-content: center;
+  }
+
+  .Header:not(.Header--blog) .Header-title,
+  .Header:not(.Header--blog) .Header-image {
+    margin-left: var(--headerSpacing-x);
+    margin-right: var(--headerSpacing-x);
+  }
+
+  .Header--blog .Header-title {
+    align-items: flex-start;
+  }
+
+  .Header:not(.Header--blog) .Header-title {
+    align-items: center;
+  }
+
+  .Header--blog .Header-titleItem--occupation {
+    font-size: 0.75em;
+  }
+
+  .Header:not(.Header--blog) .Header-titleItem--occupation {
+    font-size: 0.6em;
+  }
+
+  .Header--blog .Header-image {
+    --size: 3.5em;
+  }
+
+  .Header:not(.Header--blog) .Header-image {
+    --size: 4.761904762em;
+  }
+}

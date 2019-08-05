@@ -1,16 +1,25 @@
 <head>
-  <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }} &#8212; {{ site.title }}{% else %}{{ site.title }} &#8212; {{ site.subtitle }}{% endif %}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <style>{% capture include_to_scssify %}
-      {% include reset.css %}
-      {% include styles.scss %}
-      {% include mobile.scss %}
-      {% include code.css %}
-    {% endcapture %}
-    {{ include_to_scssify | scssify }}
+  <meta charset="utf-8" />
+  <title>
+    {% if page.title %}{{ page.title }} &#8212; {{ site.title }}{% else %}{{
+    site.title }} &#8212; {{ site.subtitle }}{% endif %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ site.description }}" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    {% capture include_to_scssify %}
+          {% include css/reset.css %}
+          {% include css/font.css %}
+          {% include css/styles.css %}
+          {% include css/about.css %}
+          {% include css/blog.css %}
+          {% include css/code.css %}
+          {% include css/footer.css %}
+          {% include css/header.css %}
+          {% include css/icon-link.css %}
+          {% include css/nav.css %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
   </style>
 </head>

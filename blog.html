@@ -1,0 +1,25 @@
+---
+layout: blog
+---
+
+<main>
+  <section class="Section">
+    <h1>Recent posts</h1>
+    {% if site.posts.size > 0 %}
+    <ul class="Posts">
+      {% for post in site.posts %}
+      <li class="Posts-item">
+        <time datetime="{{ post.date | date: '%Y-%m-%-d' }}">
+          {{ post.date | date: "%Y/%m/%-d " }}
+        </time>
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <span class="PostsItem-title">{{ post.title }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No posts available.</p>
+    {% endif %}
+  </section>
+</main>

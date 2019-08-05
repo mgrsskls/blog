@@ -1,6 +1,26 @@
-<header class="Header">
-  <a class="Header-link" href="{{ site.baseurl }}/" >
-    <h1 class="Header-title" itemprop="author">{{ site.title }}</h1>
-    <span class="Header-subtitle">{{ site.subtitle }}</span>
-  </a>
+<header class="Header{% if include.current == 'blog' %} Header--blog{% endif %}">
+  {% if include.current == "blog" %}
+    <div class="Header-title">
+  {% else %}
+    <h1 class="Header-title">
+  {% endif %}
+    <span class="Header-titleItem Header-titleItem--name"
+      >Michael Großklaus</span
+    >
+    <em class="Header-titleItem Header-titleItem--occupation">
+      freelance frontend-developer
+    </em>
+  {% if include.current == "blog" %}
+    </div>
+  {% else %}
+    </h1>
+  {% endif %}
+  <picture class="Header-image">
+    <source srcset="/assets/me{% if include.current == 'blog' %}-blog{% endif %}.webp" type="image/webp" />
+    <img
+      class="Header-imageElement"
+      src="/assets/me{% if include.current == 'blog' %}-blog{% endif %}.jpg"
+      alt="Photo of Michael Großklaus"
+    />
+  </picture>
 </header>

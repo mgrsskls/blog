@@ -1,0 +1,32 @@
+{
+  "author": "Michael Großklaus <mail@mgrossklaus.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-stylelint": "^9.0.0",
+    "imagemin-webp": "^5.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0"
+  },
+  "scripts": {
+    "lint:css": "stylelint app/assets/stylesheets",
+    "fix:css": "stylelint app/assets/stylesheets --fix",
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "browserslist": [
+    "last 2 versions and > 0.5% and not ie 11 and not dead and not op_mini all"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "ignoreFiles": "build/**"
+  }
+}

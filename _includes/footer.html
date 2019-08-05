@@ -1,21 +1,78 @@
-<footer class="Footer Content-section">
-
+<footer class="Footer Section">
   <ul class="Footer-links">
     <li class="Footer-item">
-      <a class="Footer-link IconLink IconLink--rss" title="Subscribe the RSS feed" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="IconLink-text">RSS</span></a>
+      <a
+        class="IconLink IconLink--rss"
+        title="Subscribe the RSS feed"
+        href="{{ '/feed.xml' | prepend: site.baseurl }}"
+      >
+        <span class="IconLink-text">RSS</span>
+      </a>
     </li>
     <li class="Footer-item">
-      <a class="Footer-link IconLink IconLink--github" title="{{ site.title }} at GitHub" href="https://github.com/{{ site.github_username }}" rel="noopener" target="_blank"><span class="IconLink-text">{{ site.github_username }}</span></a>
+      <a
+        class="IconLink IconLink--github"
+        title="{{ site.title }} at GitHub"
+        href="https://github.com/{{ site.github_username }}"
+        rel="noopener"
+        target="_blank"
+      >
+        <span class="IconLink-text">GitHub</span>
+      </a>
     </li>
     <li class="Footer-item">
-      <a class="IconLink IconLink--twitter Footer-link" title="{{ site.title }} at twitter" href="https://twitter.com/{{ site.twitter_username }}" rel="noopener" target="_blank"><span class="IconLink-text">{{ site.twitter_username }}</span></a>
+      <a
+        class="IconLink IconLink--twitter"
+        title="{{ site.title }} at twitter"
+        href="https://twitter.com/{{ site.twitter_username }}"
+        rel="noopener"
+        target="_blank"
+      >
+        <span class="IconLink-text">twitter</span>
+      </a>
+    </li>
+    <li class="Footer-item">
+      <a
+        class="IconLink IconLink--codepen"
+        rel="noopener"
+        href="https://codepen.io/mgrsskls/"
+        target="_blank"
+        title="view my codepen profile"
+      >
+        <span class="IconLink-text">codepen</span>
+      </a>
+    </li>
+    <li class="Footer-item">
+      <a
+        class="IconLink IconLink--email"
+        href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;"
+      >
+        <span class="IconLink-text">eMail</span>
+      </a>
     </li>
   </ul>
 
-  <p>
-    This blog runs on <a href="https://jekyllrb.com/" rel="noopener" target="_blank">Jekyll</a> and is hosted on <a href="http://pages.github.com">GitHub Pages</a>.<br>
-    You can have a look at its <a href="https://github.com/{{ site.github_username }}/blog" rel="noopener" target="_blank">source code</a>.
-  </p>
+  <div class="Footer-copy Copy">
+    <p>
+      This site runs on
+      <a href="https://jekyllrb.com/" rel="noopener" target="_blank">Jekyll</a>
+      and is hosted on <a href="http://pages.github.com">GitHub Pages</a>.<br />
+      You can have a look at
+      <a
+        href="https://github.com/{{ site.github_username }}/mgrossklaus-de"
+        rel="noopener"
+        target="_blank"
+      >
+        its source code</a
+      >.
+    </p>
 
-  <small><a class="Footer-link" href="{{ "/legal-notice" | prepend: site.baseurl }}">Legal notice</a></small>
+    <p>
+      <small>
+        <a href="{{ '/impressum' | prepend: site.baseurl }}" rel="nofollow">
+          Impressum
+        </a>
+      </small>
+    </p>
+  </div>
 </footer>

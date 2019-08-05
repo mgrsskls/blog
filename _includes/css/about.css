@@ -1,0 +1,66 @@
+.Intro em,
+.Section-title em {
+  color: var(--color-secondary);
+  display: inline-block;
+  padding: 0 0.25em;
+  position: relative;
+}
+
+.Intro em::before,
+.Section-title em::before {
+  background: #f0f0f0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewX(-10deg) rotate(-1deg);
+  z-index: -1;
+}
+
+.Intro em::before {
+  bottom: 0.25rem;
+  top: 0.25rem;
+}
+
+.Section-title em::before {
+  bottom: -0.25rem;
+  top: 0;
+}
+
+.Testimonials-item:not(:first-child) {
+  margin-top: calc(var(--spacing) / 2);
+}
+
+.Testimonial {
+  text-align: center;
+}
+
+.Testimonial-copy {
+  color: var(--color-secondary);
+  font-family: Georgia, Times, serif;
+  font-style: italic;
+}
+
+.Testimonial-author {
+  display: block;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+}
+
+/* +clients */
+.Clients {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Client-item {
+  color: var(--color-neutral);
+}
+
+.Client-item:not(:last-child)::after {
+  color: #ccc;
+  content: "/";
+  display: inline;
+  padding: 0 0.5rem;
+}
