@@ -7,10 +7,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://blog.mgrossklaus.de"
 username: "mgrossklaus"
 twitter_username: mgrossklaus
-github_username:  mgrsskls
+github_username: mgrsskls
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:month/:day/:title
+permalink: /blog/:title
 sass:
   style: :compressed
