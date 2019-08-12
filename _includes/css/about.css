@@ -32,10 +32,6 @@
   margin-top: calc(var(--spacing) / 2);
 }
 
-.Testimonial {
-  text-align: center;
-}
-
 .Testimonial-copy {
   color: var(--color-secondary);
   font-family: Georgia, Times, serif;
