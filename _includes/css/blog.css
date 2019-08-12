@@ -22,7 +22,8 @@
   display: block;
   height: auto;
   margin: 0 auto;
-  width: calc(50% - calc(1.75em / 2));
+  max-width: calc(var(--page-maxWidth) / 2);
+  width: 100%;
 }
 
 .Post-footer {
