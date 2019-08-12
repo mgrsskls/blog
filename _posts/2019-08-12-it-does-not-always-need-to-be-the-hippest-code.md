@@ -45,4 +45,4 @@ You can find a basic implementation here:
 </p>
 <script async="async" src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-Implementing this made me realize that there are so many things happening in the frontend world, that we almost forget about some of the most basic features. It is important to be aware of new developments as they can make life much easier. But while new technologies often still need tooling around them, knowing the basics is crucial to write accessible, simple and widely supported code.
+Implementing this made me realize that there are so many things happening in the frontend world, that we almost forget about some of the most basic features. It is important to be aware of new developments as they can make a developers life much easier. But while new technologies often still need tooling around them, knowing the basics is crucial to write accessible, simple and widely supported code.
