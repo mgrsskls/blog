@@ -118,6 +118,7 @@ small:not([class]) {
 .Copy table,
 .Copy dl,
 .Copy address,
+.Copy .cp_embed_wrapper,
 .highlighter-rouge:not(:first-child),
 .highlight:not(:first-child) {
   margin-top: 1.75em;
