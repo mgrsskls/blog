@@ -9,7 +9,10 @@ When working on a project, it is now completely normal for me to implement its l
 
 The last project I worked on seemed to be such a case. One main element of it was a teaser list, which was supposed to look roughly like this:
 
-![](/assets/posts/it-does-not-always-have-to-be-the-hippest-code/01.png)
+<picture>
+  <source srcset="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/01.webp" type="image/webp">
+  <img src="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/01.png" alt="">
+</picture>
 
 The important part here was that the vertical space between the teasers was the same as the horizontal space.
 
@@ -17,14 +20,20 @@ A colleague of mine started implementing it using CSS Grid, splitting it up in 1
 
 Later on I realized that the horizontal space between the teasers was not correct yet. In my solution, the small teasers (2, 3, 5 and 6) were always aligned to the bottom of the big teasers (1 and 4). I had then pulled up teaser 2 and 5 with negative margins to put them in the right position. It looked perfect, but only due to some bad dummy data and other coincidences, making all the text boxes have the same height. Of course their height needed to be flexible though. So, with more realistic data it looked somewhat like this:
 
-![](/assets/posts/it-does-not-always-have-to-be-the-hippest-code/02.png)
+<picture>
+  <source srcset="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/02.webp" type="image/webp">
+  <img src="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/02.png" alt="">
+</picture>
 
 As you can see here, the space between teaser 1 and 2 became too big because the text box in teaser 1 pushed down everything.
 
 My next idea was to take the text boxes of teaser 1 and 4 out of the flow, using `position: absolute` to align it at the bottom of the big image and then pulling it down by a fixed value. That way all small teasers would align to the bottom of the big images and I could pull down the teaser 3 and 6 by the same value I pulled down the text boxes of teaser 1 and 4.<br>
 The designer was fine with this solution, but the variable height of the text boxes in teaser 1 and 4 was a problem again as they could theoratically become higher and higher. Especially on smaller viewports, the text box becomes too high quickly as it is narrower and expands to the top:
 
-![](/assets/posts/it-does-not-always-have-to-be-the-hippest-code/03.png)
+<picture>
+  <source srcset="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/03.webp" type="image/webp">
+  <img src="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/03.png" alt="">
+</picture>
 
 I thought about it quite a bit and was sure that there is no way to implement this layout with flexbox.<br>
 Since there must be a way though, I was then trying to find another way to take the text boxes out of the elements flow – until `float` came into my mind.<br>

@@ -118,10 +118,15 @@ small:not([class]) {
 .Copy table,
 .Copy dl,
 .Copy address,
+.Copy picture,
 .Copy .cp_embed_wrapper,
 .highlighter-rouge:not(:first-child),
 .highlight:not(:first-child) {
   margin-top: 1.75em;
+}
+
+.Copy picture {
+  display: block;
 }
 
 .Copy h2 + h3 {
