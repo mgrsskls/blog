@@ -15,7 +15,7 @@
             class="Post-date Date"
             datetime="{{ page.date | date_to_xmlschema }}"
           >
-            {{ page.date | date: "%Y/%m/%-d" }}
+            {{ page.date | date: "%-d/%m/%Y" }}
           </time>
         </div>
         <div class="Post-content Copy">

@@ -9,12 +9,14 @@ layout: blog
     <ul class="Posts">
       {% for post in site.posts %}
       <li class="Posts-item">
-        <time datetime="{{ post.date | date: '%Y-%m-%-d' }}">
-          {{ post.date | date: "%Y/%m/%d" }}
-        </time>
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <span class="PostsItem-title">{{ post.title }}</span>
-        </a>
+        <div class="PostsItem">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%-d/%m/%Y" }}
+          </time>
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <span class="PostsItem-title">{{ post.title }}</span>
+          </a>
+        </div>
       </li>
       {% endfor %}
     </ul>
