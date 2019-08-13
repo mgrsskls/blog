@@ -43,7 +43,7 @@ body {
 .Content {
   margin: 0 auto;
   max-width: var(--page-maxWidth);
-  padding: 0 5%;
+  padding: 0 var(--content-spacing);
 }
 
 .Content h1,
@@ -158,6 +158,7 @@ small:not([class]) {
 @media (max-width: 32em) {
   :root {
     --spacing: 4rem;
+    --content-spacing: 2rem;
     --h1-fontSize: 3.2rem;
     --h2-fontSize: 2.6rem;
     --h3-fontSize: 2.2rem;
@@ -167,6 +168,7 @@ small:not([class]) {
 @media (min-width: 32.025em) {
   :root {
     --spacing: 6rem;
+    --content-spacing: 4rem;
     --h1-fontSize: 4rem;
     --h2-fontSize: 3.2rem;
     --h3-fontSize: 2.4rem;
@@ -176,5 +178,6 @@ small:not([class]) {
 @media (min-width: 50em) {
   :root {
     --spacing: 8rem;
+    --content-spacing: 8rem;
   }
 }

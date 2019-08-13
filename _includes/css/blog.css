@@ -25,12 +25,20 @@
 
 .Post-content img {
   display: block;
-  height: auto;
   margin: 0 auto;
-  max-width: calc(var(--page-maxWidth) / 2);
-  width: 100%;
 }
 
 .Post-footer {
   margin-top: var(--spacing);
+}
+
+.Image {
+  background: #ccc;
+  height: calc(var(--height) / 10 * 1rem);
+  max-height: calc(
+    calc(100vw - calc(var(--content-spacing) * 2)) *
+      calc(var(--height) / var(--width))
+  );
+  max-width: 100%;
+  width: calc(var(--width) / 10 * 1rem);
 }
