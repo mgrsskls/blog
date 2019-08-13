@@ -7,11 +7,11 @@
   padding: calc(var(--headerSpacing) - 2rem) 0 var(--headerSpacing);
 }
 
-.Header--blog {
+.Header--small {
   --headerSpacing: calc(var(--spacing) / 2);
 }
 
-.Header:not(.Header--blog) {
+.Header:not(.Header--small) {
   --headerSpacing: var(--spacing);
 }
 
@@ -82,8 +82,8 @@
   top: 0;
 }
 
-.Header--blog .Header-title,
-.Header--blog .Header-image {
+.Header--small .Header-title,
+.Header--small .Header-image {
   margin-left: var(--headerSpacing-x);
   margin-right: var(--headerSpacing-x);
 }
@@ -105,20 +105,20 @@
     --headerSpacing-x: 0.5rem;
   }
 
-  .Header--blog .Header-title {
+  .Header--small .Header-title {
     align-items: flex-start;
     font-size: 0.75em;
   }
 
-  .Header--blog .Header-image {
+  .Header--small .Header-image {
     --size: 2em;
   }
 
-  .Header:not(.Header--blog) .Header-title {
+  .Header:not(.Header--small) .Header-title {
     align-items: center;
   }
 
-  .Header:not(.Header--blog) .Header-image {
+  .Header:not(.Header--small) .Header-image {
     --size: 4em;
   }
 }
@@ -129,43 +129,43 @@
     --headerSpacing-x: 1rem;
   }
 
-  .Header--blog {
+  .Header--small {
     --fontSize: 2.4;
   }
 
-  .Header:not(.Header--blog) {
+  .Header:not(.Header--small) {
     --fontSize: 4.2;
 
     justify-content: center;
   }
 
-  .Header:not(.Header--blog) .Header-title,
-  .Header:not(.Header--blog) .Header-image {
+  .Header--small .Header-title {
+    align-items: flex-start;
+  }
+
+  .Header--small .Header-image {
+    --size: 3.5em;
+  }
+
+  .Header:not(.Header--small) .Header-title,
+  .Header:not(.Header--small) .Header-image {
     margin-left: var(--headerSpacing-x);
     margin-right: var(--headerSpacing-x);
   }
 
-  .Header--blog .Header-title {
-    align-items: flex-start;
-  }
-
-  .Header:not(.Header--blog) .Header-title {
+  .Header:not(.Header--small) .Header-title {
     align-items: center;
   }
 
-  .Header--blog .Header-titleItem--occupation {
+  .Header--small .Header-titleItem--occupation {
     font-size: 0.75em;
   }
 
-  .Header:not(.Header--blog) .Header-titleItem--occupation {
+  .Header:not(.Header--small) .Header-titleItem--occupation {
     font-size: 0.6em;
   }
 
-  .Header--blog .Header-image {
-    --size: 3.5em;
-  }
-
-  .Header:not(.Header--blog) .Header-image {
+  .Header:not(.Header--small) .Header-image {
     --size: 4.761904762em;
   }
 }
