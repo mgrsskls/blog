@@ -8,6 +8,11 @@
   margin-top: 2rem;
 }
 
+.PostsItem-date {
+  display: inline-block;
+  width: 5em;
+}
+
 /* +post */
 .Post-date {
   display: block;

@@ -10,7 +10,10 @@ layout: blog
       {% for post in site.posts %}
       <li class="Posts-item">
         <div class="PostsItem">
-          <time datetime="{{ post.date | date_to_xmlschema }}">
+          <time
+            class="PostsItem-date"
+            datetime="{{ post.date | date_to_xmlschema }}"
+          >
             {{ post.date | date: "%-d/%m/%Y" }}
           </time>
           <a href="{{ post.url | prepend: site.baseurl }}">
