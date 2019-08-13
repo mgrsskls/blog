@@ -5,7 +5,7 @@ title: "It does not always need to be the hippest code"
 
 One reason frontend development never becomes boring is the fact that the available technologies evolve rapidly. Browser vendors publish new features every few weeks, which makes it hard to stay up-to-date. At the same time it also makes development much easier as as a lot of functionality gets introduced by the new browser versions.
 
-When working on a project, it is now completely normal for me to implement its layout or features with Flexbox – or in some (still rare) cases with CSS Grid. Both make implementing most layouts much easier. Especially the `gap` property together with Flexbox will be extremely helpful &ndash; as soon as <a href="https://caniuse.com/#feat=flexbox-gap" target="_blank" rel="noopener">its browser support</a> is good enough.
+When working on a project, it is now completely normal for me to implement its layout or features with Flexbox – or in some (still rare) cases with CSS Grid. Both make implementing most layouts much easier.
 
 The last project I worked on seemed to be such a case. One main element of it was a teaser list, which was supposed to look roughly like this:
 
