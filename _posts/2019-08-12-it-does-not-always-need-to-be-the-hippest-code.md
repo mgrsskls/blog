@@ -22,7 +22,7 @@ Later on I realized that the horizontal space between the teasers was not correc
 
 <picture>
   <source srcset="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/02.webp" type="image/webp">
-  <img class="Image" src="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/02.png" alt="" style="--width: 360; --height: 366;">
+  <img loading="lazy" class="Image" src="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/02.png" alt="" style="--width: 360; --height: 366;">
 </picture>
 
 As you can see here, the space between teaser 1 and 2 became too big because the text box in teaser 1 pushed down everything.
@@ -32,7 +32,7 @@ The designer was fine with this solution, but the variable height of the text bo
 
 <picture>
   <source srcset="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/03.webp" type="image/webp">
-  <img class="Image" src="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/03.png" alt="" style="--width: 360; --height: 375;">
+  <img loading="lazy" class="Image" src="/assets/posts/it-does-not-always-have-to-be-the-hippest-code/03.png" alt="" style="--width: 360; --height: 375;">
 </picture>
 
 I thought about it quite a bit and was sure that there is no way to implement this layout with flexbox.<br>
