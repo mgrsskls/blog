@@ -14,3 +14,6 @@ markdown: kramdown
 permalink: /blog/:title
 sass:
   style: :compressed
+
+plugins:
+  - jekyll-sitemap
