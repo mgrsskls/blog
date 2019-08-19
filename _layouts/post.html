@@ -33,7 +33,43 @@
             >
           </li>
         </ul>
+
       </article>
+
+      {% capture the_collection %}{{page.collection}}{% endcapture %}
+      {% if page.collection %}
+        {% assign document = site[the_collection] %}
+      {% endif %}
+      {% for links in document %}
+        {% if links.title == page.title %}
+          {% unless forloop.first %}
+            {% assign nextUrl = next.url %}
+            {% assign nextTitle = next.title %}
+          {% endunless %}
+          {% unless forloop.last %}
+            {% assign prev = document[forloop.index] %}
+            {% assign prevUrl = prev.url %}
+            {% assign prevTitle = prev.title %}
+          {% endunless %}
+        {% endif %}
+        {% assign next = links %}
+      {% endfor %}
+
+      <dl class="Pagination Section">
+        {% if nextUrl %}
+          <div class="Pagination-item">
+            <dt class="Pagination-label">Next article</dt>
+            <dd><a rel="next" href="{{nextUrl}}">{{nextTitle}}</a></dd>
+          </div>
+        {% endif %}
+        {% if prevUrl %}
+          <div class="Pagination-item">
+            <dt class="Pagination-label">Previous article</dt>
+            <dd><a rel="prev" href="{{prevUrl}}">{{prevTitle}}</a></dd>
+          </div>
+        {% endif %}
+      </dl>
+
       {% include footer.html %}
     </main>
   </body>

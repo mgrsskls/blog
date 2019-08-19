@@ -42,3 +42,41 @@
   max-width: 100%;
   width: calc(var(--width) / 10 * 1rem);
 }
+
+.Pagination-label {
+  color: #767676;
+  font-weight: bold;
+}
+
+.Pagination-label::after {
+  content: ":";
+  display: inline;
+}
+
+@media (max-width: 36em) {
+  .Pagination-item:not(:first-child) {
+    margin-top: 1.75em;
+  }
+}
+
+@media (min-width: 36.025em) {
+  .Pagination {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Pagination-item {
+    box-sizing: border-box;
+    flex: 0 0 50%;
+  }
+
+  .Pagination-item:first-child {
+    padding-right: 1rem;
+  }
+
+  .Pagination-item:last-child {
+    margin-left: auto;
+    padding-left: 1rem;
+    text-align: right;
+  }
+}
