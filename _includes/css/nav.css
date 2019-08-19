@@ -28,6 +28,7 @@
 .Nav-link:focus,
 .Nav-link:active {
   color: var(--color);
+  font-weight: bold;
 }
 
 .Nav-link:not([aria-current="page"]) {

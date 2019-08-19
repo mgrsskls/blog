@@ -19,6 +19,11 @@ body {
   font: 1.8rem/1.75 "Roboto Slab", Helvetica, Arial, sans-serif;
 }
 
+b,
+strong {
+  font-weight: bold;
+}
+
 ::selection {
   background: var(--color-secondary);
   color: #fff;

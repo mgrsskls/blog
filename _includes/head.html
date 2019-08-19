@@ -1,5 +1,17 @@
 <head>
   <meta charset="utf-8" />
+  <link
+    rel="preload"
+    as="font"
+    href="/assets/fonts/RobotoSlabRegular.woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    href="/assets/fonts/RobotoSlabBold.woff2"
+    crossorigin
+  />
   <title>
     {% if page.title %}{{ page.title }} &#8212; {{ site.title }}{% else %}{{
     site.title }} &#8212; {{ site.subtitle }}{% endif %}
@@ -10,8 +22,8 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <style>
     {% capture include_to_scssify %}
-          {% include css/reset.css %}
           {% include css/font.css %}
+          {% include css/reset.css %}
           {% include css/styles.css %}
           {% include css/about.css %}
           {% include css/blog.css %}
