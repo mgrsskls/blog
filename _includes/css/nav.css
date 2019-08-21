@@ -24,6 +24,7 @@
   margin-left: 0.1rem;
 }
 
+.Nav-link[aria-current="page"],
 .Nav-link:hover,
 .Nav-link:focus,
 .Nav-link:active {
