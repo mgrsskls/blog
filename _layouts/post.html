@@ -57,13 +57,13 @@
 
       <dl class="Pagination Section">
         {% if nextUrl %}
-          <div class="Pagination-item">
+          <div class="Pagination-item Pagination-item--next">
             <dt class="Pagination-label">Next article</dt>
             <dd><a rel="next" href="{{nextUrl}}">{{nextTitle}}</a></dd>
           </div>
         {% endif %}
         {% if prevUrl %}
-          <div class="Pagination-item">
+          <div class="Pagination-item Pagination-item--prev">
             <dt class="Pagination-label">Previous article</dt>
             <dd><a rel="prev" href="{{prevUrl}}">{{prevTitle}}</a></dd>
           </div>

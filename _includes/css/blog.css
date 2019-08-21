@@ -70,11 +70,11 @@
     flex: 0 0 50%;
   }
 
-  .Pagination-item:first-child {
+  .Pagination-item--next {
     padding-right: 1rem;
   }
 
-  .Pagination-item:last-child {
+  .Pagination-item--prev {
     margin-left: auto;
     padding-left: 1rem;
     text-align: right;
