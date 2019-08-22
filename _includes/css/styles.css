@@ -59,16 +59,12 @@ strong {
 
 .Content h1:not([class]) {
   font-size: var(--h1-fontSize);
-}
-
-.Content h1:not([class]),
-.Content h2 {
   line-height: 1.1;
 }
 
 .Content h2 {
   font-size: var(--h2-fontSize);
-  margin-top: 1em;
+  line-height: 1.2;
 }
 
 .Content h3 {
@@ -130,18 +126,6 @@ small:not([class]) {
   margin-top: 1.75em;
 }
 
-.Copy picture {
-  display: block;
-}
-
-.Copy h2 + h3 {
-  margin-top: calc(12 / 24 * 1em);
-}
-
-.Copy h3 + p {
-  margin-top: calc(12 / 18 * 1em);
-}
-
 .Copy ol {
   list-style: decimal;
   padding-left: 3rem;
@@ -150,6 +134,24 @@ small:not([class]) {
 .Copy ul {
   list-style: disc;
   padding-left: 3rem;
+}
+
+.Copy picture {
+  display: block;
+}
+
+.Copy h2 + h3 {
+  margin-top: calc(12 / 24 * 1em);
+}
+
+.Copy h2 + p,
+.Copy h2 + ul,
+.Copy h2 + ol {
+  margin-top: 1em;
+}
+
+.Copy h3 + p {
+  margin-top: calc(12 / 18 * 1em);
 }
 
 .Content h2:first-child,
@@ -168,6 +170,10 @@ small:not([class]) {
     --h2-fontSize: 2.6rem;
     --h3-fontSize: 2.2rem;
   }
+
+  .Content h2 {
+    margin-top: 1.769230769em;
+  }
 }
 
 @media (min-width: 32.025em) {
@@ -177,6 +183,10 @@ small:not([class]) {
     --h1-fontSize: 4rem;
     --h2-fontSize: 3.2rem;
     --h3-fontSize: 2.4rem;
+  }
+
+  .Content h2 {
+    margin-top: 1.1875em;
   }
 }
 

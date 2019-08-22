@@ -1,5 +1,6 @@
 /* https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&text=QWERTZUIOPASDFGHJKLYXCVBNMqwertzuioöpasdfghjklyxcvbnm%C3%9F1234567890,.-/&() */
 @font-face {
+  font-display: swap;
   font-family: "Roboto Slab";
   font-style: normal;
   font-weight: 400;
@@ -8,6 +9,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Roboto Slab";
   font-style: normal;
   font-weight: bold;
