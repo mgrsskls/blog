@@ -16,9 +16,9 @@ layout: blog
           >
             {{ post.date | date: "%-d/%m/%Y" }}
           </time>
-          <a href="{{ post.url | prepend: site.baseurl }}">
-            <span class="PostsItem-title">{{ post.title }}</span>
-          </a>
+          <div class="PostsItem-title">
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </div>
         </div>
       </li>
       {% endfor %}

@@ -3,7 +3,6 @@
   display: flex;
   flex-wrap: wrap;
   font-size: var(--fontSizeRem);
-  justify-content: center;
   padding: calc(var(--headerSpacing) - 2rem) 0 var(--headerSpacing);
 }
 
@@ -13,6 +12,8 @@
 
 .Header:not(.Header--small) {
   --headerSpacing: var(--spacing);
+
+  justify-content: center;
 }
 
 .Header-title,
@@ -26,32 +27,20 @@
   line-height: 1.4;
 }
 
-.Header-titleItem {
-  padding: 0 0.25em;
-  position: relative;
-}
-
-.Header-titleItem::before {
-  background: #f0f0f0;
-  bottom: 0;
-  content: "";
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: skewX(-10deg) rotate(-1deg);
-  z-index: -1;
-}
-
 .Header-titleItem--name {
   color: var(--color-primary);
 }
 
 .Header-titleItem--occupation {
   color: var(--color-secondary);
+}
+
+.Header--small .Header-titleItem--occupation {
+  font-size: 0.75em;
+}
+
+.Header:not(.Header--small) .Header-titleItem--occupation {
   font-size: 0.6em;
-  margin: 0.25em 0 0;
 }
 
 .Header-image {
@@ -82,12 +71,6 @@
   top: 0;
 }
 
-.Header--small .Header-title,
-.Header--small .Header-image {
-  margin-left: var(--headerSpacing-x);
-  margin-right: var(--headerSpacing-x);
-}
-
 .Header-imageElement {
   background-size: 100%;
   color: transparent;
@@ -106,27 +89,18 @@
   }
 
   .Header--small .Header-title {
-    align-items: flex-start;
     font-size: 0.75em;
-  }
-
-  .Header--small .Header-image {
-    --size: 2em;
   }
 
   .Header:not(.Header--small) .Header-title {
     align-items: center;
-  }
-
-  .Header:not(.Header--small) .Header-image {
-    --size: 4em;
   }
 }
 
 @media (min-width: 30.025em) {
   .Header {
     --fontSizeRem: calc(var(--fontSize) * 1rem);
-    --headerSpacing-x: 1rem;
+    --headerSpacing-x: 2rem;
   }
 
   .Header--small {
@@ -139,33 +113,13 @@
     justify-content: center;
   }
 
-  .Header--small .Header-title {
-    align-items: flex-start;
+  .Header-image {
+    --size: 4.761904762em;
   }
 
-  .Header--small .Header-image {
-    --size: 3.5em;
-  }
-
-  .Header:not(.Header--small) .Header-title,
+  .Header:not(.Header--small) .Header-title:not(:only-child),
   .Header:not(.Header--small) .Header-image {
     margin-left: var(--headerSpacing-x);
     margin-right: var(--headerSpacing-x);
-  }
-
-  .Header:not(.Header--small) .Header-title {
-    align-items: center;
-  }
-
-  .Header--small .Header-titleItem--occupation {
-    font-size: 0.75em;
-  }
-
-  .Header:not(.Header--small) .Header-titleItem--occupation {
-    font-size: 0.6em;
-  }
-
-  .Header:not(.Header--small) .Header-image {
-    --size: 4.761904762em;
   }
 }

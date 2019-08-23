@@ -1,11 +1,15 @@
 :root {
   --about-color-primary: #740740;
   --about-color-secondary: #0a374e;
+  --about-color-secondary-light: #41718a;
   --blog-color-primary: #236c62;
   --blog-color-secondary: #0a374e;
+  --blog-color-secondary-light: #41718a;
   --color-primary: var(--about-color-primary);
   --color-secondary: var(--about-color-secondary);
+  --color-secondary-light: var(--about-color-secondary-light);
   --color-neutral: #707070;
+  --color-light: #f5f5f5;
   --page-maxWidth: 72rem;
 }
 
@@ -16,7 +20,7 @@ html {
 body {
   background: #fff;
   color: #555;
-  font: 1.8rem/1.75 "Roboto Slab", Helvetica, Arial, sans-serif;
+  font: 2rem/1.8 "Roboto Slab", Helvetica, Arial, sans-serif;
 }
 
 b,
@@ -31,29 +35,18 @@ strong {
 }
 
 .Section {
-  border-top: 0.1rem dashed #ccc;
+  border-top: 0.2rem dashed #eee;
   padding: var(--spacing) 0;
 }
 
-.Section-title {
-  display: block;
-  position: relative;
-  text-align: center;
-}
-
-.Section-title + * {
-  margin-top: 1.75em;
-}
-
-.Content {
+.Container {
   margin: 0 auto;
   max-width: var(--page-maxWidth);
   padding: 0 var(--content-spacing);
 }
 
 .Content h1,
-.Content h2,
-.Content h3 {
+.Content h2 {
   color: var(--color-secondary);
 }
 
@@ -64,11 +57,8 @@ strong {
 
 .Content h2 {
   font-size: var(--h2-fontSize);
-  line-height: 1.2;
-}
-
-.Content h3 {
-  font-size: var(--h3-fontSize);
+  line-height: var(--h2-lineHeight);
+  margin-top: var(--h2-spacing);
 }
 
 .Content a {
@@ -76,6 +66,7 @@ strong {
 }
 
 .Content a:not([class]),
+.Footer a:not([class]),
 .IconLink-text {
   --color: var(--color-primary);
 
@@ -90,6 +81,9 @@ strong {
 .Content a:not([class]):hover,
 .Content a:not([class]):focus,
 .Content a:not([class]):active,
+.Footer a:not([class]):hover,
+.Footer a:not([class]):focus,
+.Footer a:not([class]):active,
 .IconLink:hover,
 .IconLink:focus,
 .IconLink:active {
@@ -99,6 +93,9 @@ strong {
 .Content a:not([class]):hover,
 .Content a:not([class]):focus,
 .Content a:not([class]):active,
+.Footer a:not([class]):hover,
+.Footer a:not([class]):focus,
+.Footer a:not([class]):active,
 a:hover .IconLink-text,
 a:focus .IconLink-text,
 a:active .IconLink-text {
@@ -112,7 +109,6 @@ small:not([class]) {
   font-size: 0.75em;
 }
 
-.Copy h3,
 .Copy p,
 .Copy ul,
 .Copy ol,
@@ -120,42 +116,74 @@ small:not([class]) {
 .Copy dl,
 .Copy address,
 .Copy picture,
-.Copy .cp_embed_wrapper,
+.Testimonials-item:not(:first-child),
 .highlighter-rouge:not(:first-child),
-.highlight:not(:first-child) {
-  margin-top: 1.75em;
+.highlight:not(:first-child),
+.Copy .cp_embed_wrapper {
+  margin-top: 1.8em;
+}
+
+.Copy li {
+  margin-top: 0.9em;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.Copy li::before {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+}
+
+.Copy ul li::before {
+  --size: 0.3em;
+
+  border: 0.2rem solid var(--color-primary);
+  border-radius: 50%;
+  height: var(--size);
+  top: 1.5rem;
+  width: var(--size);
+}
+
+.Copy p,
+.Copy ul,
+.Copy ol,
+.Copy blockquote,
+.Testimonials,
+.Clients,
+.Posts {
+  margin-left: var(--copy-spacing);
+  margin-right: var(--copy-spacing);
 }
 
 .Copy ol {
-  list-style: decimal;
-  padding-left: 3rem;
+  counter-reset: list;
 }
 
-.Copy ul {
-  list-style: disc;
-  padding-left: 3rem;
+.Copy ol li {
+  counter-increment: list;
+}
+
+.Copy ol li::before {
+  color: var(--color-primary);
+  content: counter(list) ".";
+  font-weight: bold;
 }
 
 .Copy picture {
   display: block;
 }
 
-.Copy h2 + h3 {
-  margin-top: calc(12 / 24 * 1em);
-}
-
 .Copy h2 + p,
 .Copy h2 + ul,
-.Copy h2 + ol {
-  margin-top: 1em;
-}
-
-.Copy h3 + p {
-  margin-top: calc(12 / 18 * 1em);
+.Copy h2 + ol,
+.Testimonials,
+.Clients {
+  margin-top: var(--h2-descendant-spacing);
 }
 
 .Content h2:first-child,
-.Copy h3:first-child,
 .Copy p:first-child,
 .Copy ul:first-child,
 .Copy ol:first-child {
@@ -166,13 +194,12 @@ small:not([class]) {
   :root {
     --spacing: 4rem;
     --content-spacing: 2rem;
-    --h1-fontSize: 3.2rem;
-    --h2-fontSize: 2.6rem;
-    --h3-fontSize: 2.2rem;
-  }
-
-  .Content h2 {
-    margin-top: 1.769230769em;
+    --h1-fontSize: 3rem;
+    --h2-fontSize: 2.4rem;
+    --h2-lineHeight: 1.5;
+    --h2-spacing: 2.208333333em;
+    --h2-descendant-spacing: 1.9em;
+    --copy-spacing: 0;
   }
 }
 
@@ -180,13 +207,12 @@ small:not([class]) {
   :root {
     --spacing: 6rem;
     --content-spacing: 4rem;
-    --h1-fontSize: 4rem;
+    --h1-fontSize: 4.2rem;
     --h2-fontSize: 3.2rem;
-    --h3-fontSize: 2.4rem;
-  }
-
-  .Content h2 {
-    margin-top: 1.1875em;
+    --h2-lineHeight: 1.125;
+    --h2-spacing: 1.5625em;
+    --h2-descendant-spacing: 2em;
+    --copy-spacing: 3rem;
   }
 }
 

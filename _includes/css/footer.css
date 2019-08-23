@@ -1,3 +1,9 @@
+.Footer {
+  background: var(--color-light);
+  outline: 0.2rem dashed #eee;
+  padding: var(--spacing) 0;
+}
+
 .Footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -12,5 +18,5 @@
 }
 
 .Footer-copy {
-  margin-top: 1.75em;
+  margin-top: 4rem;
 }

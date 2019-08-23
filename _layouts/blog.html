@@ -5,9 +5,16 @@
   <body>
     {% include nav.html current="blog" %}
 
-    <div class="Content Blog">
-      {% include header.html small=true current="blog" %} {{ content }} {%
-      include footer.html %}
+    <div class="Blog">
+      <div class="Container">
+        {% include header.html small=true current="blog" %}
+
+        <div class="Content">
+          {{ content }}
+        </div>
+      </div>
+
+      {% include footer.html %}
     </div>
   </body>
 </html>

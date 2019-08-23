@@ -1,26 +1,31 @@
-<header class="Header{% if include.small %} Header--small{% endif %}">
-  {% if include.small %}
+{% if include.small %}
+  <header class="Header Header--small">
     <div class="Header-title">
-  {% else %}
-    <h1 class="Header-title">
-  {% endif %}
-    <span class="Header-titleItem Header-titleItem--name"
-      >Michael Großklaus</span
-    >
-    <em class="Header-titleItem Header-titleItem--occupation">
-      freelance frontend-developer
-    </em>
-  {% if include.small %}
+      <span class="Header-titleItem Header-titleItem--name"
+        >Michael Großklaus</span
+      >
+      <em class="Header-titleItem Header-titleItem--occupation">
+        freelance frontend-developer
+      </em>
     </div>
-  {% else %}
+  </header>
+{% else %}
+  <header class="Header">
+    <h1 class="Header-title">
+      <span class="Header-titleItem Header-titleItem--name"
+        >Michael Großklaus</span
+      >
+      <em class="Header-titleItem Header-titleItem--occupation">
+        freelance frontend-developer
+      </em>
     </h1>
-  {% endif %}
-  <picture class="Header-image">
-    <source srcset="/assets/me{% if include.current == 'blog' %}-blog{% endif %}.webp" type="image/webp" />
-    <img
-      class="Header-imageElement"
-      src="/assets/me{% if include.small %}-blog{% endif %}.jpg"
-      alt="Photo of Michael Großklaus"
-    />
-  </picture>
-</header>
+    <picture class="Header-image">
+      <source srcset="/assets/me.webp" type="image/webp" />
+      <img
+        class="Header-imageElement"
+        src="/assets/me.jpg"
+        alt="Photo of Michael Großklaus"
+      />
+    </picture>
+  </header>
+{% endif %}

@@ -1,47 +1,35 @@
-.Intro em,
-.Section-title em {
+.Intro em {
+  background: var(--color-light);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: var(--color-secondary);
-  display: inline-block;
-  padding: 0 0.25em;
-  position: relative;
+  padding: 0 0.2em;
 }
 
-.Intro em::before,
-.Section-title em::before {
-  background: #f0f0f0;
-  content: "";
-  display: block;
+.Intro em::after {
+  background: var(--color-light);
   left: 0;
-  position: absolute;
-  right: 0;
-  transform: skewX(-10deg) rotate(-1deg);
-  z-index: -1;
+  top: 0.3rem;
 }
 
-.Intro em::before {
-  bottom: 0.25rem;
-  top: 0.25rem;
+.Testimonial-copy::before {
+  color: #d2e1e9;
+  content: "“";
+  float: left;
+  font-size: 6em;
+  height: 5rem;
+  line-height: 1;
+  margin: 0 2rem 0 1rem;
+  text-shadow: 0.2rem 0.2rem #fff, 0.3rem 0.3rem 0 var(--color-secondary-light);
 }
 
-.Section-title em::before {
-  bottom: -0.25rem;
-  top: 0;
-}
-
-.Testimonials-item:not(:first-child) {
-  margin-top: calc(var(--spacing) / 2);
-}
-
-.Testimonial-copy {
-  color: var(--color-secondary);
-  font-family: Georgia, Times, serif;
-  font-style: italic;
+.Testimonial-copy::after {
+  content: "”";
 }
 
 .Testimonial-author {
+  color: var(--color-secondary-light);
   display: block;
-  font-size: 0.875em;
-  margin-top: 0.25rem;
+  margin-top: 0.9em;
 }
 
 /* +clients */
@@ -55,8 +43,7 @@
 }
 
 .Client-item:not(:last-child)::after {
-  color: #ccc;
-  content: "/";
+  content: "·";
   display: inline;
-  padding: 0 0.5rem;
+  padding: 0 1rem 0 0.5rem;
 }
