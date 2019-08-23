@@ -5,8 +5,12 @@
 }
 
 /* +posts */
-.Posts {
-  margin-top: 2rem;
+.Posts-title {
+  font-weight: 300;
+}
+
+.Posts-list {
+  margin-top: 4rem;
 }
 
 .Posts-item:not(:first-child) {
@@ -34,6 +38,7 @@
 .PostsItem-date {
   color: var(--color-secondary-light);
   display: inline-block;
+  font-weight: 300;
 }
 
 .PostsItem-title {
@@ -45,9 +50,14 @@
 }
 
 /* +post */
+.Post-title {
+  font-weight: normal;
+}
+
 .Post-date {
   color: var(--color-secondary-light);
   display: block;
+  font-weight: 300;
   margin-top: 0.75rem;
 }
 

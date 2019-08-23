@@ -11,6 +11,10 @@
   top: 0.3rem;
 }
 
+.Intro b {
+  color: var(--color-secondary);
+}
+
 .Testimonial-copy::before {
   color: #d2e1e9;
   content: "“";

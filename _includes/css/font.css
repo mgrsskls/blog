@@ -16,3 +16,12 @@
   src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"),
     url("/assets/fonts/RobotoSlabBold.woff2") format("woff2");
 }
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Slab Light"), local("RobotoSlab-Light"),
+    url("/assets/fonts/RobotoSlabLight.woff2") format("woff2");
+}

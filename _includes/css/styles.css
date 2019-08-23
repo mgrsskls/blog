@@ -50,15 +50,22 @@ strong {
   color: var(--color-secondary);
 }
 
-.Content h1:not([class]) {
+.Content h1 {
   font-size: var(--h1-fontSize);
   line-height: 1.1;
 }
 
 .Content h2 {
   font-size: var(--h2-fontSize);
+  font-weight: 300;
   line-height: var(--h2-lineHeight);
   margin-top: var(--h2-spacing);
+}
+
+.Content h1 span,
+.Content h2 span {
+  color: var(--color-secondary-light);
+  font-weight: normal;
 }
 
 .Content a {
@@ -152,7 +159,7 @@ small:not([class]) {
 .Copy blockquote,
 .Testimonials,
 .Clients,
-.Posts {
+.Posts-list {
   margin-left: var(--copy-spacing);
   margin-right: var(--copy-spacing);
 }

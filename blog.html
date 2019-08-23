@@ -4,30 +4,32 @@ layout: blog
 
 <main>
   <section class="Section">
-    <h1>Recent posts</h1>
-    {% if site.posts.size > 0 %}
-    <ul class="Posts">
-      {% for post in site.posts %}
-      <li class="Posts-item">
-        <div class="PostsItem">
-          <div class="PostsItem-heading">
-            <time
-              class="PostsItem-date"
-              datetime="{{ post.date | date_to_xmlschema }}"
-            >
-              {{ post.date | date: "%-d/%m/%Y" }}
-            </time>
-            <div class="PostsItem-title">
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    <div class="Posts">
+      <h1 class="Posts-title">Latest <span>posts</span></h1>
+      {% if site.posts.size > 0 %}
+      <ul class="Posts-list">
+        {% for post in site.posts %}
+        <li class="Posts-item">
+          <div class="PostsItem">
+            <div class="PostsItem-heading">
+              <time
+                class="PostsItem-date"
+                datetime="{{ post.date | date_to_xmlschema }}"
+              >
+                {{ post.date | date: "%-d/%m/%Y" }}
+              </time>
+              <div class="PostsItem-title">
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </div>
             </div>
+            <p class="PostsItem-excerpt">{{ post.excerpt | strip_html }}</p>
           </div>
-          <p class="PostsItem-excerpt">{{ post.excerpt | strip_html }}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p>No posts available.</p>
-    {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No posts available.</p>
+      {% endif %}
+    </div>
   </section>
 </main>
