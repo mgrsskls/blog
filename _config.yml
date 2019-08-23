@@ -9,6 +9,8 @@ username: "mgrossklaus"
 twitter_username: mgrossklaus
 github_username: mgrsskls
 
+excerpt_separator: <!--more-->
+
 # Build settings
 markdown: kramdown
 permalink: /blog/:title

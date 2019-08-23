@@ -3,7 +3,7 @@ layout: post
 title: "An easier way to use relative units"
 ---
 
-Browsers nowadays perfectly zoom in and out when using `cmd`-`+` and `cmd`-`-`. Because of this, developers sometimes think that using relative units is actually not necessary. But as zooming that way only affects the current website, browsers also have a setting to change the default font size of the browser. Unfortunately, this has no effect when using absolute units. That is why using relative units _is_ important.
+Browsers nowadays perfectly zoom in and out when using `cmd`-`+` and `cmd`-`-`. Because of this, developers sometimes think that using relative units is actually not necessary. But as zooming<!--more--> that way only affects the current website, browsers also have a setting to change the default font size of the browser. Unfortunately, this has no effect when using absolute units. That is why using relative units _is_ important.
 
 As in the beginning of my developer career it was still completely normal to use `px` for everything and getting Photoshop layouts with pixel measurements, I still think in pixels when developing. Of course, there are tools that help you with that: you can e.g. use `px` in your code base which becomes converted to `rem` when using a post- or pre-processor.
 

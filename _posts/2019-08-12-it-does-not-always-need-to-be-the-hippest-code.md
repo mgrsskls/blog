@@ -3,7 +3,7 @@ layout: post
 title: "It does not always need to be the hippest code"
 ---
 
-One reason frontend development never becomes boring is the fact that the available technologies evolve rapidly. Browser vendors publish new features every few weeks, which makes it hard to stay up-to-date. At the same time it also makes development much easier as as a lot of functionality gets introduced by the new browser versions.
+One reason frontend development never becomes boring is the fact that the available technologies evolve rapidly. Browser<!--more--> vendors publish new features every few weeks, which makes it hard to stay up-to-date. At the same time it also makes development much easier as as a lot of functionality gets introduced by the new browser versions.
 
 When working on a project, it is now completely normal for me to implement its layout or features with Flexbox – or in some (still rare) cases with CSS Grid. Both make implementing most layouts much easier.
 

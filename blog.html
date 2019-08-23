@@ -10,15 +10,18 @@ layout: blog
       {% for post in site.posts %}
       <li class="Posts-item">
         <div class="PostsItem">
-          <time
-            class="PostsItem-date"
-            datetime="{{ post.date | date_to_xmlschema }}"
-          >
-            {{ post.date | date: "%-d/%m/%Y" }}
-          </time>
-          <div class="PostsItem-title">
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <div class="PostsItem-heading">
+            <time
+              class="PostsItem-date"
+              datetime="{{ post.date | date_to_xmlschema }}"
+            >
+              {{ post.date | date: "%-d/%m/%Y" }}
+            </time>
+            <div class="PostsItem-title">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </div>
           </div>
+          <p class="PostsItem-excerpt">{{ post.excerpt | strip_html }}</p>
         </div>
       </li>
       {% endfor %}

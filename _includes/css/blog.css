@@ -9,13 +9,39 @@
   margin-top: 2rem;
 }
 
+.Posts-item:not(:first-child) {
+  margin-top: 0.9em;
+}
+
 .PostsItem {
+  position: relative;
+}
+
+.PostsItem a::after {
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.PostsItem-heading {
   display: flex;
 }
 
 .PostsItem-date {
   color: var(--color-secondary-light);
   display: inline-block;
+}
+
+.PostsItem-title {
+  font-weight: bold;
+}
+
+.PostsItem-excerpt::after {
+  content: "…";
 }
 
 /* +post */
