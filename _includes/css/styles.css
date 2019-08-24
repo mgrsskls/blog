@@ -34,6 +34,7 @@ html:not(.fonts-loaded) body {
 
 b,
 strong {
+  color: var(--color-secondary);
   font-weight: bold;
 }
 
