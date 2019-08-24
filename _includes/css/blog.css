@@ -107,6 +107,10 @@
     flex-direction: column;
   }
 
+  .PostsItem-heading {
+    flex-direction: column;
+  }
+
   .Post-content > p:first-child::first-letter {
     font-size: 3.6em;
     margin: 0.15em 0.1em 0 0;
