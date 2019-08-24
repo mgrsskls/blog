@@ -13,10 +13,6 @@
   margin-top: 4rem;
 }
 
-.Posts-item:not(:first-child) {
-  margin-top: 0.9em;
-}
-
 .PostsItem {
   position: relative;
 }
@@ -109,10 +105,6 @@
 @media (max-width: 36em) {
   .PostsItem {
     flex-direction: column;
-  }
-
-  .Posts-item:not(:first-child) {
-    margin-top: 1em;
   }
 
   .Post-content > p:first-child::first-letter {

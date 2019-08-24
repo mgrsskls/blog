@@ -135,7 +135,8 @@ small:not([class]) {
 .Testimonials-item:not(:first-child),
 .highlighter-rouge:not(:first-child),
 .highlight:not(:first-child),
-.Copy .cp_embed_wrapper {
+.Copy .cp_embed_wrapper,
+.Posts-item:not(:first-child) {
   margin-top: 1.8em;
 }
 
