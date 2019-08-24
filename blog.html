@@ -19,7 +19,7 @@ layout: blog
                 {{ post.date | date: "%-d/%m/%Y" }}
               </time>
               <div class="PostsItem-title">
-                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <a href="{{ post.url }}">{{ post.title }}</a>
               </div>
             </div>
             <p class="PostsItem-excerpt">{{ post.excerpt | strip_html }}</p>
