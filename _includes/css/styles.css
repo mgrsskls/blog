@@ -20,7 +20,7 @@ html {
 body {
   background: #fff;
   color: #555;
-  font: 2rem/1.8 "Roboto Slab", Helvetica, Arial, sans-serif;
+  font: 1.8rem/1.8 "Roboto Slab", Helvetica, Arial, sans-serif;
 }
 
 html:not(.fonts-loaded) body {
@@ -208,8 +208,8 @@ small:not([class]) {
   :root {
     --spacing: 4rem;
     --content-spacing: 2rem;
-    --h1-fontSize: 3rem;
-    --h2-fontSize: 2.4rem;
+    --h1-fontSize: 1.5em;
+    --h2-fontSize: 1.2em;
     --h2-lineHeight: 1.5;
     --h2-spacing: 2.208333333em;
     --h2-descendant-spacing: 1.9em;
@@ -221,8 +221,8 @@ small:not([class]) {
   :root {
     --spacing: 6rem;
     --content-spacing: 4rem;
-    --h1-fontSize: 4.2rem;
-    --h2-fontSize: 3.2rem;
+    --h1-fontSize: 2.1em;
+    --h2-fontSize: 1.6em;
     --h2-lineHeight: 1.125;
     --h2-spacing: 1.5625em;
     --h2-descendant-spacing: 2em;
