@@ -8,6 +8,8 @@
 
 .Header--small {
   --headerSpacing: calc(var(--spacing) / 2);
+
+  justify-content: center;
 }
 
 .Header:not(.Header--small) {
@@ -22,9 +24,12 @@
 }
 
 .Header-title {
-  display: flex;
-  flex-direction: column;
   line-height: 1.4;
+}
+
+.Header-titleItem {
+  display: block;
+  text-align: center;
 }
 
 .Header-titleItem--name {

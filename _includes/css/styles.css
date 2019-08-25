@@ -48,7 +48,7 @@ strong {
 .Container {
   margin: 0 auto;
   max-width: var(--page-maxWidth);
-  padding: 0 var(--content-spacing);
+  padding: 0 2rem;
 }
 
 .Content h1,
