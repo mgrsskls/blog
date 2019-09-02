@@ -1,8 +1,7 @@
 # Site settings
-title: Michael Großklaus
-subtitle: html / css / javascript / performance / usability / accessibility
+title: Michael Großklaus &ndash; Freelance frontend developer
 email: mail@mgrossklaus.de
-description: "Dealing with html, css, javascript, usability, performance and accessibility. More about Michael Großklaus at www.mgrossklaus.de"
+description: "Michael Großklaus is a freelance frontend developer. He writes about html, css, javascript, usability, performance and accessibility."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.mgrossklaus.de"
 username: "mgrossklaus"
