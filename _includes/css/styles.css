@@ -70,6 +70,7 @@ strong {
 }
 
 .Content a {
+  box-decoration-break: clone;
   color: var(--color-primary);
 }
 
