@@ -1,12 +1,17 @@
 <nav class="Nav">
   <ul class="Nav-list">
     <li class="Nav-item">
-      <a class="Nav-link Nav-link--about" href="/"{% if include.current == "about" %} aria-current="page"{% endif %}>
+      <a class="Nav-link Nav-link--about" href="/"{% if page.current == "about" %} aria-current="page"{% endif %}>
         <span class="Nav-label">About</span>
       </a>
     </li>
     <li class="Nav-item">
-      <a class="Nav-link Nav-link--blog" href="/blog"{% if include.current == "blog" %} aria-current="page"{% endif %}>
+      <a class="Nav-link Nav-link--code" href="/code"{% if page.current == "code" %} aria-current="page"{% endif %}>
+        <span class="Nav-label">Code</span>
+      </a>
+    </li>
+    <li class="Nav-item">
+      <a class="Nav-link Nav-link--blog" href="/blog"{% if page.current == "blog" %} aria-current="page"{% endif %}>
         <span class="Nav-label">Blog</span>
       </a>
     </li>

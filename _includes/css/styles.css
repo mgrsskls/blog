@@ -1,13 +1,10 @@
 :root {
   --about-color-primary: #740740;
-  --about-color-secondary: #0a374e;
-  --about-color-secondary-light: #41718a;
-  --blog-color-primary: #236c62;
-  --blog-color-secondary: #0a374e;
-  --blog-color-secondary-light: #41718a;
+  --code-color-primary: #787254;
+  --blog-color-primary: #3d7f6f;
   --color-primary: var(--about-color-primary);
-  --color-secondary: var(--about-color-secondary);
-  --color-secondary-light: var(--about-color-secondary-light);
+  --color-secondary: #0a374e;
+  --color-secondary-light: #41718a;
   --color-neutral: #707070;
   --color-light: #f5f5f5;
   --page-maxWidth: 72rem;
@@ -53,6 +50,7 @@ strong {
 
 .Content h1 {
   font-size: var(--h1-fontSize);
+  font-weight: 300;
   line-height: 1.1;
 }
 

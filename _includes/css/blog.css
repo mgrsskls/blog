@@ -1,7 +1,5 @@
 .Blog {
   --color-primary: var(--blog-color-primary);
-  --color-secondary: var(--blog-color-secondary);
-  --color-secondary-light: var(--blog-color-secondary-light);
 }
 
 /* +posts */

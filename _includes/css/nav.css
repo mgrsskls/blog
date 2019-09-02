@@ -1,5 +1,11 @@
+.Nav {
+  background: var(--color-light);
+}
+
 .Nav-list {
   display: flex;
+  margin: 0 auto;
+  max-width: var(--page-maxWidth);
 }
 
 .Nav-item {
@@ -18,39 +24,34 @@
   --color: var(--about-color-primary);
 }
 
+.Nav-link--code {
+  --color: var(--code-color-primary);
+}
+
 .Nav-link--blog {
   --color: var(--blog-color-primary);
-
-  margin-left: 0.1rem;
 }
 
 .Nav-link[aria-current="page"],
 .Nav-link:hover,
 .Nav-link:focus,
 .Nav-link:active {
-  color: var(--color);
   font-weight: bold;
 }
 
-.Nav-link[aria-current="page"] {
-  border-top-color: currentColor;
+.Nav-link:hover,
+.Nav-link:focus,
+.Nav-link:active {
+  color: var(--color);
 }
 
-.Nav-link:not([aria-current="page"]) {
-  background-color: var(--color-light);
-  box-shadow: var(--shadowDirection) -0.5rem 0.75rem rgba(0, 0, 0, 0.05) inset;
+.Nav-link[aria-current="page"] {
+  background-color: #fff;
+  border-top-color: var(--color);
 }
 
 .Nav-item:first-child .Nav-link {
   justify-content: flex-end;
-}
-
-.Nav-item:first-child .Nav-link:not([aria-current="page"]) {
-  --shadowDirection: -0.5rem;
-}
-
-.Nav-item:last-child .Nav-link:not([aria-current="page"]) {
-  --shadowDirection: 0.5rem;
 }
 
 .Nav-label {
