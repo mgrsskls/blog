@@ -23,11 +23,6 @@ body {
   font: 1.8rem/1.8 "Roboto Slab", Helvetica, Arial, sans-serif;
 }
 
-html:not(.fonts-loaded) body {
-  letter-spacing: 0.04rem;
-  word-spacing: 0.1rem;
-}
-
 b,
 strong {
   color: var(--color-secondary);
