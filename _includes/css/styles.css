@@ -152,7 +152,7 @@ small:not([class]) {
   border: 0.2rem solid var(--color-primary);
   border-radius: 50%;
   height: var(--size);
-  top: 1.5rem;
+  top: 1.35rem;
   width: var(--size);
 }
 
