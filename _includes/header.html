@@ -1,31 +1,17 @@
-{% if include.small %}
-  <header class="Header Header--small">
-    <div class="Header-title">
-      <span class="Header-titleItem Header-titleItem--name"
-        >Michael Großklaus</span
-      >
-      <em class="Header-titleItem Header-titleItem--occupation">
-        freelance frontend-developer
-      </em>
+<header class="Header Header--small">
+  {% if include.headline %}
+    <h1 class="Header-pageTitle">{{ include.headline }}</h1>
+  {% endif %}
+    <div class="Header-titleItems">
+      {% if include.date %}
+        <time
+          class="Post-date Date"
+          datetime="{{ page.date | date_to_xmlschema }}"
+        >
+          {{ include.date | date: "%-d/%m/%Y" }}
+        </time>
+      {% else %}
+        <span class="Header-titleItem Header-titleItem--name">Michael Großklaus</span> &middot; <em class="Header-titleItem Header-titleItem--occupation">freelance frontend-developer</em>
+      {% endif %}
     </div>
-  </header>
-{% else %}
-  <header class="Header">
-    <h1 class="Header-title">
-      <span class="Header-titleItem Header-titleItem--name"
-        >Michael Großklaus</span
-      >
-      <em class="Header-titleItem Header-titleItem--occupation">
-        freelance frontend-developer
-      </em>
-    </h1>
-    <picture class="Header-image">
-      <source srcset="/assets/me.webp" type="image/webp" />
-      <img
-        class="Header-imageElement"
-        src="/assets/me.jpg"
-        alt="Portrait of Michael Großklaus."
-      />
-    </picture>
-  </header>
-{% endif %}
+</header>

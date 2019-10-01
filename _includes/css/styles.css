@@ -18,6 +18,7 @@ body {
   background: #fff;
   color: #555;
   font: 1.8rem/1.8 "Roboto Slab", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 b,
@@ -43,11 +44,13 @@ strong {
   padding: 0 2rem;
 }
 
+.Header-pageTitle,
 .Content h1,
 .Content h2 {
   color: var(--color-secondary);
 }
 
+.Header-pageTitle,
 .Content h1 {
   font-size: var(--h1-fontSize);
   font-weight: 300;
@@ -61,6 +64,7 @@ strong {
   margin-top: var(--h2-spacing);
 }
 
+.Header-pageTitle span,
 .Content h1 span,
 .Content h2 span {
   color: var(--color-secondary-light);
@@ -127,7 +131,8 @@ small:not([class]) {
 .highlighter-rouge:not(:first-child),
 .highlight:not(:first-child),
 .Copy .cp_embed_wrapper,
-.Posts-item:not(:first-child) {
+.Posts-item:not(:first-child),
+.Copy .FullSize {
   margin-top: 1.8em;
 }
 
@@ -198,6 +203,28 @@ small:not([class]) {
   margin-top: 0;
 }
 
+.FullSize {
+  left: 50%;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+}
+
+.FullSize--code {
+  padding-bottom: 80%;
+}
+
+.FullSize iframe {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 @media (max-width: 32em) {
   :root {
     --spacing: 4rem;
@@ -226,7 +253,6 @@ small:not([class]) {
 
 @media (min-width: 50em) {
   :root {
-    --spacing: 8rem;
     --content-spacing: 8rem;
   }
 }

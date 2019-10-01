@@ -11,21 +11,12 @@ layout: compress
 
     <div class="Blog">
       <div class="Container">
-        {% include header.html small=true %}
+        {% include header.html headline=page.title date=page.date %}
 
         <main>
           <div class="Content">
 
             <article class="Post Section">
-              <div class="Post-heading">
-                <h1>{{ page.title }}</h1>
-                <time
-                  class="Post-date Date"
-                  datetime="{{ page.date | date_to_xmlschema }}"
-                >
-                  {{ page.date | date: "%-d/%m/%Y" }}
-                </time>
-              </div>
               <div class="Post-content Copy">
                 {{ content }}
               </div>

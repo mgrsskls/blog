@@ -1,21 +1,24 @@
 .Header {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
+  --fontSizeRem: calc(var(--fontSize) * 1rem);
+
   font-size: var(--fontSizeRem);
-  padding: calc(var(--headerSpacing) - 2rem) 0 var(--headerSpacing);
 }
 
 .Header--small {
-  --headerSpacing: calc(var(--spacing) / 2);
+  --headerSpacing: calc(var(--spacing) / 1);
+  --fontSize: 2.4;
 
-  justify-content: center;
+  padding: var(--headerSpacing) 0;
 }
 
 .Header:not(.Header--small) {
   --headerSpacing: var(--spacing);
 
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: calc(var(--headerSpacing) - 2rem) 0 var(--headerSpacing);
 }
 
 .Header-title,
@@ -27,24 +30,22 @@
   line-height: 1.4;
 }
 
-.Header-titleItem {
-  display: block;
-  text-align: center;
+.Header--small .Header-titleItems {
+  font-size: 0.75em;
+  font-weight: 300;
+  margin-top: 0.5rem;
 }
 
-.Header-titleItem--name {
+.Header:not(.Header--small) .Header-titleItem {
+  display: block;
+}
+
+.Header:not(.Header--small) .Header-titleItem--name {
   color: var(--color-primary);
 }
 
-.Header-titleItem--occupation {
-  color: var(--color-secondary);
-}
-
-.Header--small .Header-titleItem--occupation {
-  font-size: 0.75em;
-}
-
 .Header:not(.Header--small) .Header-titleItem--occupation {
+  color: var(--color-secondary);
   font-size: 0.6em;
 }
 
@@ -88,13 +89,11 @@
 
 @media (max-width: 30em) {
   .Header {
-    --fontSize: 3.2;
-    --fontSizeRem: calc(var(--fontSize) * 1rem);
     --headerSpacing-x: 0.5rem;
   }
 
-  .Header--small .Header-title {
-    font-size: 0.75em;
+  .Header:not(.Header--small) {
+    --fontSize: 3.2;
   }
 
   .Header:not(.Header--small) .Header-title {
@@ -104,12 +103,7 @@
 
 @media (min-width: 30.025em) {
   .Header {
-    --fontSizeRem: calc(var(--fontSize) * 1rem);
     --headerSpacing-x: 2rem;
-  }
-
-  .Header--small {
-    --fontSize: 2.4;
   }
 
   .Header:not(.Header--small) {

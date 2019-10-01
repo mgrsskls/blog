@@ -1,13 +1,12 @@
 ---
 layout: blog
 title: Blog
-current: blog
+headline: Latest <span>articles.</span>
 ---
 
 <main>
   <section class="Section">
     <div class="Posts">
-      <h1 class="Posts-title">Latest <span>articles.</span></h1>
       {% if site.posts.size > 0 %}
       <ul class="Posts-list">
         {% for post in site.posts %}
