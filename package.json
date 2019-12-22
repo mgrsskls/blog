@@ -3,10 +3,10 @@
   "license": "MIT",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "del": "^5.0.0",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-ext-replace": "^0.3.0",
-    "gulp-imagemin": "^6.0.0",
+    "gulp-imagemin": "^6.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-stylelint": "^9.0.0",
     "imagemin-webp": "^5.1.0",

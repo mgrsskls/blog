@@ -1,0 +1,50 @@
+.Header {
+  padding: 20rem 0 0;
+}
+
+.Header-titleItem--occupation {
+  font-size: 3.2rem;
+  font-weight: 800;
+  left: 3rem;
+  line-height: 1.2;
+  position: absolute;
+  top: 2rem;
+}
+
+.Header-titleItem--name {
+  display: block;
+  font-size: 12rem;
+  font-weight: 800;
+  letter-spacing: -0.022em;
+  line-height: 0.9;
+  /*position: relative;*/
+}
+
+/*.Header-titleItem--name::before,
+.Header-titleItem--name::after {
+  --size: 40rem;
+
+  bottom: -2.5rem;
+  clip-path: polygon(0 2rem, 100% 0, 100% 100%, 5% 100%);
+  content: "";
+  display: block;
+  height: var(--size);
+  left: -5rem;
+  position: absolute;
+  width: var(--size);
+  z-index: -1;
+}
+
+.Header-titleItem--name::before {
+  background: url("/assets/me.webp") no-repeat;
+}
+
+.Header-titleItem--name::after {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    25%,
+    var(--color-secondary)
+  );
+  mix-blend-mode: color;
+}*/

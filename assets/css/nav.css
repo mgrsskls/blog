@@ -1,0 +1,7 @@
+.Nav-list {
+  display: flex;
+}
+
+.Nav-item:not(:last-child) {
+  margin-inline-end: 3rem;
+}

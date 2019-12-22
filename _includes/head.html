@@ -1,29 +1,12 @@
 <head>
-  <meta charset="utf-8" />
-  <link rel="preload" as="font" href="/assets/fonts/RobotoSlabBold.woff2" crossorigin />
-  <link rel="preload" as="font" href="/assets/fonts/RobotoSlabLight.woff2" crossorigin />
+  <meta charset="utf-8">
   <title>
     {% if page.title %}{{ page.title }} &#8212; {{ site.title }}{% else %}{{
     site.title }}{% endif %}
   </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="{{ site.description }}" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-  <style>
-    {% capture include_to_scssify %}
-          {% include css/font.css %}
-          {% include css/reset.css %}
-          {% include css/styles.css %}
-          {% include css/about.css %}
-          {% include css/blog.css %}
-          {% include css/blog-code.css %}
-          {% include css/code.css %}
-          {% include css/footer.css %}
-          {% include css/header.css %}
-          {% include css/icon-link.css %}
-          {% include css/nav.css %}
-        {% endcapture %}
-        {{ include_to_scssify | scssify }}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>

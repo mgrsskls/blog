@@ -1,0 +1,176 @@
+.Section {
+  margin: 10rem 0 0;
+}
+
+.Intro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Intro-image,
+.Intro-copy {
+  flex: 1 1 50%;
+}
+
+.Intro-image {
+  clip-path: polygon(0 2rem, 100% 0, 100% 100%, 5% 100%);
+  display: block;
+  max-width: 40rem;
+  position: relative;
+}
+
+.Intro-image::after {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    25%,
+    var(--color-secondary)
+  );
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  mix-blend-mode: color;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.Intro-imageElement {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.Intro-copy {
+  padding-block-start: 2rem;
+  padding-inline-start: 6rem;
+}
+
+.Testimonials {
+  background: var(--color-dark);
+  color: var(--color-bright);
+  margin-top: -8rem;
+  padding: 16rem 0;
+}
+
+.Testimonials-list {
+  counter-reset: testimonials;
+  margin: 8rem 0 0;
+}
+
+.Testimonials-item {
+  counter-increment: testimonials;
+  position: relative;
+}
+
+.Testimonials-item:not(:first-child) {
+  margin-top: 12rem;
+}
+
+/*.Testimonials-item::before {
+  color: hsl(0, 0%, 96%);
+  content: "0" counter(testimonials);
+  font-size: 32rem;
+  font-weight: 800;
+  letter-spacing: -0.022em;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Testimonials-item:nth-child(odd)::before {
+  left: 0;
+}
+
+.Testimonials-item:nth-child(even)::before {
+  right: 0;
+}*/
+
+.Testimonial {
+  display: flex;
+}
+
+.Testimonial-copy {
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: -0.019em;
+}
+
+.Testimonials-item:nth-child(even) .Testimonial-copy {
+  text-align: right;
+}
+
+.Testimonial-author {
+  align-self: flex-end;
+  flex: 0 0 28%;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0 0 0.4rem;
+  position: relative;
+}
+
+.Testimonial-author a {
+  font-size: 1.6rem;
+}
+
+.Testimonials-item:nth-child(odd) .Testimonial-author::after,
+.Testimonials-item:nth-child(even) .Testimonial-author::before {
+  color: hsla(0, 0%, 100%, 0.25);
+  content: "↖";
+  display: inline-block;
+  font-size: 6.4rem;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+}
+
+.Testimonials-item:nth-child(odd) .Testimonial-author::after {
+  left: calc(100% + 2rem);
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.Testimonials-item:nth-child(even) .Testimonial-author::before {
+  right: calc(100% + 2rem);
+}
+
+.Testimonial-author a {
+  font-weight: normal;
+}
+
+.Testimonials-item:nth-child(odd) .Testimonial-author {
+  margin-inline-end: 10rem;
+  order: -1;
+  text-align: right;
+}
+
+.Testimonials-item:nth-child(even) .Testimonial-author {
+  margin-inline-start: 10rem;
+}
+
+.Clients {
+  margin-top: 16rem;
+}
+
+.Clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6rem 0 0;
+}
+
+.Clients-item {
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.Clients-item:not(:last-child) {
+  margin-inline-end: 1rem;
+}
+
+.Clients-item:not(:last-child)::after {
+  content: "/";
+  margin-inline-start: 0.5rem;
+}

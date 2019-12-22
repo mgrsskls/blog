@@ -1,4 +1,4 @@
-<header class="Header Header--small">
+<header class="Header">
   {% if include.headline %}
     <h1 class="Header-pageTitle">{{ include.headline }}</h1>
   {% endif %}
@@ -11,7 +11,10 @@
           {{ include.date | date: "%-d/%m/%Y" }}
         </time>
       {% else %}
-        <span class="Header-titleItem Header-titleItem--name">Michael Großklaus</span> &middot; <em class="Header-titleItem Header-titleItem--occupation">freelance frontend-developer</em>
+        <span class="Header-titleItem Header-titleItem--occupation">freelance frontend-developer</span>
+        <span class="Header-titleItem Header-titleItem--name">
+          <span>Michael</span> <span>Großklaus</span>
+        </span>
       {% endif %}
     </div>
 </header>

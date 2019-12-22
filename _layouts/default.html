@@ -7,7 +7,6 @@ layout: compress
   {% include head.html %}
 
   <body>
-    {% include nav.html current="about" %}
 
     <div class="Container">
       <header class="Header">
@@ -17,19 +16,13 @@ layout: compress
             freelance frontend-developer
           </em>
         </h1>
-        <picture class="Header-image">
-          <source srcset="/assets/me.webp" type="image/webp" />
-          <img
-            class="Header-imageElement"
-            src="/assets/me.jpg"
-            alt="Portrait of Michael Großklaus."
-          />
-        </picture>
       </header>
+    </div>
 
-      <div class="Content">
-        {{ content }}
-      </div>
+    {% include nav.html current="about" %}
+
+    <div class="Content">
+      {{ content }}
     </div>
 
     {% include footer.html %}
