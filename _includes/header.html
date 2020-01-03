@@ -8,7 +8,7 @@
           class="Post-date Date"
           datetime="{{ page.date | date_to_xmlschema }}"
         >
-          {{ include.date | date: "%-d/%m/%Y" }}
+          {{ include.date | date: "%d/%m/%Y" }}
         </time>
       {% else %}
         <span class="Header-titleItem Header-titleItem--name">Michael Großklaus</span> &middot; <em class="Header-titleItem Header-titleItem--occupation">freelance frontend-developer</em>

@@ -17,7 +17,7 @@ headline: Latest <span>articles.</span>
                 class="PostsItem-date"
                 datetime="{{ post.date | date_to_xmlschema }}"
               >
-                {{ post.date | date: "%-d/%m/%Y" }}
+                {{ post.date | date: "%d/%m/%Y" }}
               </time>
               <div class="PostsItem-title">
                 <a href="{{ post.url }}">{{ post.title }}</a>
