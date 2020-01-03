@@ -10,6 +10,28 @@
   <meta name="description" content="{{ site.description }}">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  <script src="/assets/up.js" defer></script>
   <link rel="stylesheet" href="/assets/styles.css">
+  <script>
+    var circle;
+    var icon;
+
+    function onScroll() {
+      requestAnimationFrame(function() {
+        const scrollY = window.scrollY;
+        const angle =
+          (289 / (document.body.scrollHeight - window.innerHeight)) * scrollY;
+        circle.setAttribute("stroke-dasharray", `${angle}, 289`);
+        icon.classList.toggle("is-visible", scrollY > 0);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      circle = document.querySelector(".Up circle");
+      icon = document.querySelector(".Up-icon");
+
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+      window.addEventListener("resize", onScroll);
+    });
+  </script>
 </head>
