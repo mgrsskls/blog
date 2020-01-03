@@ -57,7 +57,7 @@ gulp.task("build:webp", () =>
     .pipe(
       imagemin([
         webp({
-          quality: 75
+          quality: 50
         })
       ])
     )
