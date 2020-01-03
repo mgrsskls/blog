@@ -1,7 +1,7 @@
 .highlighter-rouge {
-  background: var(--color-light);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: var(--color-primary);
+  background: var(--tertiary-color);
+  border: 0.1rem solid var(--divider-color);
+  color: var(--text-color);
   padding: 0.15em 0.2em;
 }
 

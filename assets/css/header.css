@@ -1,0 +1,64 @@
+.MainTitle {
+  display: block;
+  font-weight: 800;
+  letter-spacing: -0.022em;
+  position: relative;
+  z-index: 1;
+}
+
+.About .MainTitle {
+  max-width: 7em;
+}
+
+.MainTitle--small {
+  font-size: 7.2rem;
+  line-height: 1;
+}
+
+.MainTitle--large {
+  font-size: 12rem;
+  line-height: 0.9;
+}
+
+.SubTitle {
+  color: var(--secondary-color);
+  font-size: 3.2rem;
+  line-height: 1.2;
+  position: absolute;
+  top: 2.5rem;
+  z-index: 2;
+}
+
+a.SubTitle {
+  text-decoration: none;
+}
+
+.SubTitle-sub {
+  color: var(--text-color);
+  display: block;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 42.5em) {
+  .MainTitle--small {
+    font-size: 3.2rem;
+  }
+
+  .MainTitle--large {
+    font-size: calc(4rem + 5vw);
+  }
+
+  .SubTitle {
+    display: block;
+    font-size: 2.4rem;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media (min-width: 42.53125em) {
+  .SubTitle {
+    left: 2.5%;
+    padding-inline-end: 6rem;
+  }
+}

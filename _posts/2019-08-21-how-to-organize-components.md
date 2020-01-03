@@ -3,7 +3,7 @@ layout: post
 title: How to organize components
 ---
 
-Probably the most popular way of organizing your components is <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank" rel="noopener">Atomic Design</a> which was introduced by Brad Frost. I recently talked to a client of mine who said that they were succesfully<!--more--> using this methodology in all their projects and that it works really well for them. We had a short discussion about it as I was using it for a little bit as well, but was realizing pretty quickly that it would just not work for me. One reason for that is the following example: let's say you have two atoms; a button and an icon. If a button could also have an icon included, you would include an atom in another atom. While you could of course do that, it simply feels wrong to me (there are also no atoms in atoms in the nature, are there?).<br>
+Probably the most popular way of organizing your components is <a href="http://bradfrost.com/blog/post/atomic-web-design/" rel="noopener">Atomic Design</a> which was introduced by Brad Frost. I recently talked to a client of mine who said that they were<!--more--> succesfully using this methodology in all their projects and that it works really well for them. We had a short discussion about it as I was using it for a little bit as well, but was realizing pretty quickly that it would just not work for me. One reason for that is the following example: let's say you have two atoms; a button and an icon. If a button could also have an icon included, you would include an atom in another atom. While you could of course do that, it simply feels wrong to me (there are also no atoms in atoms in the nature, are there?).<br>
 That is just one example for why I came up with my own way of organizing my components.
 
 Of course, this is an ongoing process and every project is different, but I basically follow these rules:
@@ -64,4 +64,4 @@ The structure for an example project could look like this:
 
 Again, this is nothing static and can be adapted for every project. Especially having a directory called `content` with components that can be picked by editors, makes of course only sense when there is actually a CMS behind the scenes.
 
-If you are looking for a component library that plays well together with what I described in this post, feel free to check out <a href="https://github.com/mgrsskls/headman" target="_blank" rel="nofollower">headman</a>. It is a small node module that can be used to develop your components in isolation, no matter how you organize them.
+If you are looking for a component library that plays well together with what I described in this post, feel free to check out <a href="https://github.com/mgrsskls/headman" rel="noopener">headman</a>. It is a small node module that can be used to develop your components in isolation, no matter how you organize them.

@@ -1,0 +1,30 @@
+.Nav {
+  font-size: 1.6rem;
+  position: fixed;
+  right: 2.5%;
+}
+
+.Nav-list {
+  text-align: end;
+}
+
+.Nav-item a {
+  text-decoration: none;
+}
+
+.Nav-item a[aria-current] {
+  font-weight: 800;
+}
+
+@media (max-width: 42.5em) {
+  .Nav {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 42.53125em) {
+  .Nav {
+    top: 2.75rem;
+  }
+}

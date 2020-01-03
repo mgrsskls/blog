@@ -1,0 +1,23 @@
+.Testimonials-item {
+  position: relative;
+}
+
+.Testimonials-item:not(:first-child) {
+  margin-block-start: 6rem;
+}
+
+.Testimonial {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.Testimonial-author {
+  display: block;
+  font-weight: 800;
+  padding-block-end: 0.5rem;
+  position: relative;
+}
+
+.Testimonial-author a {
+  font-weight: normal;
+}

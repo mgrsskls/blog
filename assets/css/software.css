@@ -1,0 +1,9 @@
+.Software-item:not(:first-child) {
+  margin-block-start: 6rem;
+}
+
+.Software-name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.019em;
+}

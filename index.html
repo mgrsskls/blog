@@ -1,93 +1,106 @@
 ---
+js: true
 layout: default
 ---
 
 <main>
-  <section class="Section Intro Copy">
-    <p>
-      I am Michael Großklaus, a freelance frontend developer for <b>html</b>, <b>css</b> and <b>javascript</b> from <a href="https://www.google.de/maps/place/Hamburg/@53.5582447,9.647645" target="_blank" rel="noopener" >Hamburg</a>, Germany.
-    </p>
-    <p>
-      Having 12 years of professional experience, I put high value in <b>performance</b>, <b>usability</b> and <b>accessibility</b> and have a good understanding for backend technologies and visual design.
-    </p>
-    <p>
-      In my spare time, I work on <a href="/code">open source software</a> and write <a href="/blog">articles about frontend development</a> as often as possible.
-    </p>
+  <Section class="Container Container--large">
+    <div class="Intro Grid">
+      <picture class="Intro-image">
+        <source srcset="/assets/images/me-2x.webp 2x, /assets/images/me.webp 1x" type="image/webp" />
+        <source srcset="/assets/images/me-2x.jpg 2x, /assets/images/me.jpg 1x" type="image/jpg" />
+        <img
+          class="Intro-imageElement"
+          src="/assets/images/me.jpg"
+          alt="Portrait of Michael Großklaus"
+          width="560"
+          height="560"
+        />
+      </picture>
+      <div class="Intro-copy Copy">
+        <p>
+          I am Michael Großklaus, a freelance frontend developer for <b>html</b>, <b>css</b> and <b>javascript</b> from <a href="https://www.google.de/maps/place/Hamburg/@53.5582447,9.647645" rel="noopener" >Hamburg</a>, Germany.
+        </p>
+        <p>
+          Having 12 years of professional experience, I put high value in <b>performance</b>, <b>usability</b> and <b>accessibility</b> and have a good understanding for backend technologies and visual design.<br>
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <section class="Section Testimonials">
+    <div class="Container Container--large">
+      <div class="Grid">
+        <div class="HeadlineContainer">
+          <h2 class="Headline">Testimonials</h2>
+        </div>
+        <ul class="Testimonials-list">
+          <li class="Testimonials-item">
+            <blockquote class="Testimonial">
+              <p class="Testimonial-copy Copy">
+                “Michael supported us on a number of projects. He is a hard worker and delivers high quality code. From design brief to finished feature he takes responsibility, works independently and makes sure that expectations are met. We are looking forward to working with Michael again.”
+              </p>
+              <span class="Testimonial-author">Katharina Döpke &middot; <a href="http://www.factorial.io/" rel="noopener">Factorial GmbH</a></span>
+            </blockquote>
+          </li>
+          <li class="Testimonials-item">
+            <blockquote class="Testimonial">
+              <p class="Testimonial-copy Copy">
+                “Working with Michael Großklaus was an all around pleasurable experience: Fast turnaround, attention to detail and being open to suggestions and changes translated into an efficient completion of the website for my client. I’m hoping to send another project his way soon.”
+              </p>
+              <span class="Testimonial-author">Michael Koritschan &middot; <a href="http://www.studio-koritschan.com/" rel="noopener">Studio Koritschan</a></span>
+            </blockquote>
+          </li>
+          <li class="Testimonials-item">
+            <blockquote class="Testimonial">
+              <p class="Testimonial-copy Copy">
+                “Michael Großklaus is a rare breed – A User Experience Engineer that cares deeply about code quality and web standards, while getting things done. It’s a pleasure to work with Michael and I hope we have many more opportunities to do so.”
+              </p>
+              <span class="Testimonial-author">Milan Matull &middot; <a href="http://www.factorial.io/" rel="noopener">Factorial GmbH</a></span>
+            </blockquote>
+          </li>
+          <li class="Testimonials-item">
+            <blockquote class="Testimonial">
+              <p class="Testimonial-copy Copy">
+                “Working with Michael was a great pleasure. He familiarized himself with the project very quickly and developed a clean, well thought-out and high-quality solution.”
+              </p>
+              <span class="Testimonial-author">Patrick Schnetger &middot; <a href="https://www.patrick-schnetger.com/" rel="noopener">Freelance Ruby on Rails developer</a></span>
+            </blockquote>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <section class="Section">
-    <h2>What my <span>clients say.</span></h2>
-    <ul class="Testimonials">
-      <li class="Testimonials-item">
-        <blockquote class="Testimonial">
-          <p class="Testimonial-copy">
-            Michael Großklaus is a rare breed – A User Experience Engineer that cares deeply about code quality and web standards, while getting things done. It’s a pleasure to work with Michael and I hope we have many more opportunities to do so.
-          </p>
-          <small class="Testimonial-author">Milan Matull (Frontend Lead Developer / Partner) &middot; <a href="http://www.factorial.io/" rel="noopener" target="_blank">Factorial GmbH</a></small>
-        </blockquote>
-      </li>
-      <li class="Testimonials-item">
-        <blockquote class="Testimonial">
-          <p class="Testimonial-copy">
-            Working with Michael was a great pleasure. He familiarized himself with the project very quickly and developed a clean, well thought-out and high-quality solution.
-          </p>
-          <small class="Testimonial-author">Patrick Schnetger &middot; Freelance Ruby on Rails developer</small>
-        </blockquote>
-      </li>
-      <li class="Testimonials-item">
-        <blockquote class="Testimonial">
-          <p class="Testimonial-copy">
-            Michael supported us on a number of projects. He is a hard worker and delivers high quality code. From design brief to finished feature he takes responsibility, works independently and makes sure that expectations are met. We are looking forward to working with Michael again.
-          </p>
-          <small class="Testimonial-author">Katharina Döpke &middot; <a href="http://www.factorial.io/" rel="noopener" target="_blank">Factorial GmbH</a></small>
-        </blockquote>
-      </li>
-      <li class="Testimonials-item">
-        <blockquote class="Testimonial">
-          <p class="Testimonial-copy">
-            Working with Michael Großklaus was an all around pleasurable experience: Fast turnaround, attention to detail and being open to suggestions and changes translated into an efficient completion of the website for my client. I’m hoping to send another project his way soon.
-          </p>
-          <small class="Testimonial-author">Michael Koritschan &middot;
-            <a href="http://www.studio-koritschan.com/" rel="noopener" target="_blank">Studio Koritschan</a></small>
-        </blockquote>
-      </li>
-    </ul>
+  <section class="Section Software">
+    <div class="Container Container--large">
+      <div class="Grid">
+        <div class="HeadlineContainer">
+          <h2 class="Headline">Open source</h2>
+        </div>
+        <dl class="Software-list">
+          <div class="Software-item">
+            <dt class="Software-name"><a href="https://github.com/mgrsskls/headman" rel="noopener">headman</a></dt>
+            <dd class="Copy">is a development tool that helps you to develop your components encapsulated and independently from a backend. It supports many JS rendering engines and validates your components on the fly for html and accessibility violations.</dd>
+          </div>
+          <div class="Software-item">
+            <dt class="Software-name"><a href="https://github.com/mgrsskls/typing-effect" rel="noopener">typing-effect</a></dt> <dd class="Copy">is a small ES module that creates a typing effect for one or multiple elements. Unlike other libraries, it does not push around other elements while typing.</dd>
+          </div>
+          <div class="Software-item">
+            <dt class="Software-name"><a href="https://github.com/mgrsskls/text-truncation" rel="noopener">text-truncation</a></dt>
+            <dd class="Copy">cuts off the text of one or multiple elements in a container with fixed height. A typical use case is a list with article teasers which all have the same height.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
   </section>
 
-  <section class="Section">
-    <h2>
-      Who I worked for <span>since 2011.</span>
-    </h2>
-
-    <ul class="Clients">
-      <li class="Client-item">
-        <a rel="noopener" href="https://www.xing.com/" target="_blank">XING</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="https://www.factorial.io/" target="_blank">Factorial</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="https://www.shipstock.com" target="_blank">ShipStock</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="https://www.louis.de" target="_blank">Louis</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="https://lifetime.eu/" target="_blank">connected-health.eu</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="http://nerdindustries.com/" target="_blank">Nerd Industries</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="http://www.njiuko.com" target="_blank">Njiuko</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="http://www.fork.de" target="_blank">Fork Unstable Media</a>
-      </li>
-      <li class="Client-item">
-        <a rel="noopener" href="https://planungsbuero.de" target="_blank">pbi planungsbüro INTERNET</a>
-      </li>
-      <li class="Client-item">…and more</li>
-    </ul>
-  </section>
+  <div class="Section Container Container--large">
+    <div class="Grid">
+      <div class="HeadlineContainer">
+        <h2 class="Headline">Links</h2>
+      </div>
+      {% include footer.html %}
+    </div>
+  </div>
 </main>

@@ -1,0 +1,33 @@
+.Intro {
+  margin-block-start: -4rem;
+}
+
+.Intro-image {
+  display: block;
+  margin-inline-start: -6rem;
+}
+
+.Intro-imageElement {
+  display: block;
+  height: auto;
+  max-width: 56rem;
+  width: 100%;
+}
+
+.Intro-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 42.5em) {
+  .Intro {
+    margin-block-start: -2.5rem;
+  }
+}
+
+@media (min-width: 42.53125em) {
+  .Intro {
+    margin-block-start: -4rem;
+  }
+}

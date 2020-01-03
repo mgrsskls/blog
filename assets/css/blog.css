@@ -1,8 +1,20 @@
-.Blog {
-  --color-primary: var(--blog-color-primary);
+@import "./blog-code.css";
+
+.Date {
+  color: var(--secondary-color);
+}
+
+.Blog-content {
+  margin-block-end: 8rem;
+  margin-block-start: 8rem;
 }
 
 /* +posts */
+
+.Posts-item:not(:first-child) {
+  margin-block-start: 4rem;
+}
+
 .PostsItem {
   position: relative;
 }
@@ -19,12 +31,12 @@
 
 .PostsItem-heading {
   display: flex;
+  padding-block-end: 1rem;
 }
 
 .PostsItem-date {
-  color: var(--color-secondary-light);
   display: inline-block;
-  font-weight: 300;
+  padding-inline-end: 1rem;
 }
 
 .PostsItem-title {
@@ -41,34 +53,18 @@
 }
 
 .Post-date {
-  color: var(--color-secondary-light);
   display: block;
-  font-weight: 300;
-  margin-top: 0.75rem;
+  margin-block-start: 0.75rem;
 }
 
-.Post-content > p:first-child::first-letter {
-  color: var(--color-secondary);
-  float: left;
-  line-height: 0.6;
-  text-shadow: 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.5),
-    0.3rem 0.3rem 0 var(--color-primary);
-}
-
-.Post-content img {
+.Post img {
   display: block;
-  margin: 0 auto;
-}
-
-.Post-footer {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--spacing);
-  white-space: nowrap;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
 
 .Image {
-  background: #ccc;
+  background: var(--divider-color);
   height: calc(var(--height) / 10 * 1rem);
   max-height: calc(
     calc(100vw - calc(var(--content-spacing) * 2)) *
@@ -78,8 +74,12 @@
   width: calc(var(--width) / 10 * 1rem);
 }
 
+.Pagination {
+  padding-block-start: 8rem;
+}
+
 .Pagination-label {
-  color: var(--color-neutral);
+  color: var(--secondary-color);
   font-weight: bold;
 }
 
@@ -97,33 +97,19 @@
     flex-direction: column;
   }
 
-  .Post-content > p:first-child::first-letter {
-    font-size: 3.6em;
-    margin: 0.15em 0.1em 0 0;
-  }
-
   .Pagination-item:not(:first-child) {
-    margin-top: 2rem;
+    margin-block-start: 2rem;
   }
 }
 
 @media (min-width: 36.025em) {
-  .PostsItem-date {
-    flex: 0 0 5.9em;
-  }
-
   .PostsItem-date::after {
     content: "·";
-    padding: 0 0 0 0.1em;
+    padding-inline-start: 0.1em;
   }
 
   .PostsItem-title {
     flex: 1;
-  }
-
-  .Post-content > p:first-child::first-letter {
-    font-size: 6em;
-    margin: 0.1em 0.1em 0 0;
   }
 
   .Pagination-list {
@@ -137,12 +123,12 @@
   }
 
   .Pagination-item--next {
-    padding-right: 1rem;
+    padding-inline-end: 1rem;
   }
 
   .Pagination-item--prev {
-    margin-left: auto;
-    padding-left: 1rem;
-    text-align: right;
+    margin-inline-start: auto;
+    padding-inline-start: 1rem;
+    text-align: end;
   }
 }

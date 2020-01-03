@@ -13,11 +13,11 @@ const buildFolder = "./assets";
 const folders = {
   src: {
     css: "./_includes/css",
-    images: "./assets"
+    images: "./assets/images"
   },
   build: {
     css: `${buildFolder}/css`,
-    images: `${buildFolder}`
+    images: "./assets/images"
   }
 };
 

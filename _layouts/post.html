@@ -6,77 +6,66 @@ layout: compress
 <html lang="en">
   {% include head.html %}
 
-  <body>
+  <body id="top">
+    <header>
+      <a href="/" class="SubTitle">
+        <b>Michael Großklaus</b> <span class="SubTitle-sub">freelance frontend developer</span>
+      </a>
+    </header>
+
     {% include nav.html current="blog" %}
 
-    <div class="Blog">
-      <div class="Container">
-        {% include header.html headline=page.title date=page.date %}
+    <main class="Container Container--small">
+      <h1 class="MainTitle MainTitle--small">{{ page.title }}</h1>
+      <article>
+        <time class="Post-date Date" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%d/%m/%Y" }}
+        </time>
 
-        <main>
-          <div class="Content">
-
-            <article class="Post Section">
-              <div class="Post-content Copy">
-                {{ content }}
-              </div>
-
-              <ul class="Post-footer">
-                <li>
-                  <a
-                    class="IconLink IconLink--twitter"
-                    href="https://twitter.com/home/?status={{page.title | url_encode }}%20{{site.url}}{{page.url}}"
-                    target="_blank"
-                    rel="noopener"
-                    ><span class="IconLink-text">Tweet this</span></a
-                  >
-                </li>
-              </ul>
-
-            </article>
-
-            {% capture the_collection %}{{page.collection}}{% endcapture %}
-            {% if page.collection %}
-              {% assign document = site[the_collection] %}
-            {% endif %}
-            {% for links in document %}
-              {% if links.title == page.title %}
-                {% unless forloop.first %}
-                  {% assign nextUrl = next.url %}
-                  {% assign nextTitle = next.title %}
-                {% endunless %}
-                {% unless forloop.last %}
-                  {% assign prev = document[forloop.index] %}
-                  {% assign prevUrl = prev.url %}
-                  {% assign prevTitle = prev.title %}
-                {% endunless %}
-              {% endif %}
-              {% assign next = links %}
-            {% endfor %}
-
-          </div>
-
-          <div class="Pagination">
-            <div class="Content">
-              <dl class="Pagination-list Section">
-                {% if nextUrl %}
-                  <div class="Pagination-item Pagination-item--next">
-                    <dt class="Pagination-label">Next article</dt>
-                    <dd><a rel="next" href="{{nextUrl}}">{{nextTitle}}</a></dd>
-                  </div>
-                {% endif %}
-                {% if prevUrl %}
-                  <div class="Pagination-item Pagination-item--prev">
-                    <dt class="Pagination-label">Previous article</dt>
-                    <dd><a rel="prev" href="{{prevUrl}}">{{prevTitle}}</a></dd>
-                  </div>
-                {% endif %}
-              </dl>
-            </div>
-          </div>
+        <div class="Blog-content Post Copy">
+          {{ content }}
         </div>
-      </main>
 
+        {% capture the_collection %}{{page.collection}}{% endcapture %}
+        {% if page.collection %}
+          {% assign document = site[the_collection] %}
+        {% endif %}
+        {% for links in document %}
+          {% if links.title == page.title %}
+            {% unless forloop.first %}
+              {% assign nextUrl = next.url %}
+              {% assign nextTitle = next.title %}
+            {% endunless %}
+            {% unless forloop.last %}
+              {% assign prev = document[forloop.index] %}
+              {% assign prevUrl = prev.url %}
+              {% assign prevTitle = prev.title %}
+            {% endunless %}
+          {% endif %}
+          {% assign next = links %}
+        {% endfor %}
+
+      </article>
+    </main>
+
+    <aside class="Container Container--small Pagination">
+      <dl class="Pagination-list">
+        {% if nextUrl %}
+          <div class="Pagination-item Pagination-item--next">
+            <dt class="Pagination-label">Next article</dt>
+            <dd><a rel="next" href="{{nextUrl}}">{{nextTitle}}</a></dd>
+          </div>
+        {% endif %}
+        {% if prevUrl %}
+          <div class="Pagination-item Pagination-item--prev">
+            <dt class="Pagination-label">Previous article</dt>
+            <dd><a rel="prev" href="{{prevUrl}}">{{prevTitle}}</a></dd>
+          </div>
+        {% endif %}
+      </dl>
+    </aside>
+
+    <div class="Section has-divider Container Container--small">
       {% include footer.html %}
     </div>
   </body>

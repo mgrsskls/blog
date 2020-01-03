@@ -6,32 +6,22 @@ layout: compress
 <html lang="en">
   {% include head.html %}
 
-  <body>
-    {% include nav.html current="about" %}
-
-    <div class="Container">
-      <header class="Header">
-        <h1 class="Header-title">
-          <span class="Header-titleItem Header-titleItem--name">Michael Großklaus</span>
-          <em class="Header-titleItem Header-titleItem--occupation">
-            freelance frontend-developer
-          </em>
+  <body id="top" class="About">
+    <div class="Container Container--large">
+      <header>
+        <h1>
+          <span class="MainTitle MainTitle--large">
+            Michael Großklaus
+          </span>
+          <span class="SubTitle SubTitle--large">
+            <b>freelance frontend developer</b>
+          </span>
         </h1>
-        <picture class="Header-image">
-          <source srcset="/assets/me.webp" type="image/webp" />
-          <img
-            class="Header-imageElement"
-            src="/assets/me.jpg"
-            alt="Portrait of Michael Großklaus."
-          />
-        </picture>
       </header>
 
-      <div class="Content">
-        {{ content }}
-      </div>
+      {% include nav.html current="about" %}
     </div>
 
-    {% include footer.html %}
+    {{ content }}
   </body>
 </html>

@@ -1,0 +1,57 @@
+.Copy h2 {
+  margin-block-start: 1.6em;
+}
+
+.Copy p:not(:first-child),
+.Copy ul:not(:first-child),
+.Copy ol:not(:first-child),
+.Copy table:not(:first-child),
+.Copy dl:not(:first-child),
+.Copy address:not(:first-child),
+.Copy picture:not(:first-child),
+.highlighter-rouge:not(:first-child),
+.highlight:not(:first-child),
+.Copy .cp_embed_wrapper:not(:first-child) {
+  margin-block-start: 1.8em;
+}
+
+.Copy li {
+  margin-block-start: 0.9em;
+  padding-inline-start: 2rem;
+  position: relative;
+}
+
+.Copy li::before {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+}
+
+.Copy ul li::before {
+  --size: 0.4em;
+
+  background: var(--secondary-color);
+  border-radius: 50%;
+  height: var(--size);
+  top: 1.1rem;
+  width: var(--size);
+}
+
+.Copy ol {
+  counter-reset: list;
+}
+
+.Copy ol li {
+  counter-increment: list;
+}
+
+.Copy ol li::before {
+  color: var(--secondary-color);
+  content: counter(list) ".";
+  font-weight: bold;
+}
+
+.Copy picture {
+  display: block;
+}

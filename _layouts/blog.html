@@ -6,18 +6,23 @@ layout: compress
 <html lang="en">
   {% include head.html %}
 
-  <body>
+  <body id="top">
+    <header>
+      <a href="/" class="SubTitle">
+        <b>Michael Großklaus</b> <span class="SubTitle-sub">freelance frontend developer</span>
+      </a>
+    </header>
+
     {% include nav.html current="blog" %}
 
-    <div class="Blog">
-      <div class="Container">
-        {% include header.html headline=page.headline %}
+    <main class="Container Container--small">
+      <h1 class="MainTitle MainTitle--large">{{ page.headline }}</h1>
+      <article class="Blog-content">
+        {{ content }}
+      </article>
+    </main>
 
-        <div class="Content">
-          {{ content }}
-        </div>
-      </div>
-
+    <div class="Section has-divider Container Container--small">
       {% include footer.html %}
     </div>
   </body>

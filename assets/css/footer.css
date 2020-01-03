@@ -1,0 +1,23 @@
+.Footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Footer-item {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.019em;
+}
+
+.Footer-item:not(:last-child) {
+  margin-inline-end: 1rem;
+}
+
+.Footer-item:not(:last-child)::after {
+  content: "/";
+  margin-inline-start: 0.5rem;
+}
+
+.Footer-copy {
+  margin-block-start: 8rem;
+}

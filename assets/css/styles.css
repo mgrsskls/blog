@@ -1,0 +1,131 @@
+:root {
+  --color-bright-bg: #fff;
+  --color-bright-primary: #062b3e;
+  --color-bright-secondary: #3e7e8e;
+  --color-bright-tertiary: #f4f4f4;
+  --color-dark-bg: #062b3e;
+  --color-dark-primary: #fff;
+  --color-dark-secondary: #aecdd5;
+  --color-dark-tertiary: #0c374d;
+  --background-color: var(--color-bright-bg);
+  --text-color: var(--color-bright-primary);
+  --secondary-color: var(--color-bright-secondary);
+  --tertiary-color: var(--color-bright-tertiary);
+  --divider-color: rgba(0, 0, 0, 0.25);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font: 1.6rem/1.8 "Inter", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.011em;
+  overflow-x: hidden;
+}
+
+h1 {
+  padding-block-start: var(--h1-spacing-top);
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: var(--h2-size);
+  font-weight: 800;
+  letter-spacing: -0.024em;
+  line-height: var(--h2-line-height);
+}
+
+a:not([class]):hover,
+a:not([class]):focus {
+  background: #9f2050;
+  color: #fff;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: 800;
+}
+
+small {
+  font-size: 0.5em;
+}
+
+.Container {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  padding-inline-end: 6rem;
+  width: calc(100% - 10%);
+}
+
+.Container--small {
+  max-width: 78rem;
+}
+
+.Container--large {
+  max-width: 124rem;
+}
+
+.Grid {
+  display: grid;
+  grid-gap: 6rem;
+}
+
+.Section {
+  margin-block-end: var(--section-spacing);
+  margin-block-start: var(--section-spacing);
+}
+
+.Section.has-divider {
+  border-top: 0.1rem solid var(--divider-color);
+  padding-block-start: var(--section-spacing);
+}
+
+@media (min-width: 28em) {
+  .Grid {
+    grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr));
+  }
+}
+
+@media (max-width: 42.5em) {
+  :root {
+    --section-spacing: 8rem;
+    --h1-spacing-top: 16rem;
+    --h2-size: 2.4rem;
+    --h2-line-height: 1.4;
+  }
+}
+
+@media (min-width: 42.53125em) {
+  :root {
+    --section-spacing: 16rem;
+    --h1-spacing-top: 26vh;
+    --h2-size: 3.2rem;
+    --h2-line-height: 1.1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--color-dark-bg);
+    --text-color: var(--color-dark-primary);
+    --secondary-color: var(--color-dark-secondary);
+    --tertiary-color: var(--color-dark-tertiary);
+    --divider-color: rgba(255, 255, 255, 0.25);
+  }
+}
