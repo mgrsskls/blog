@@ -119,13 +119,3 @@ small {
     --h2-line-height: 1.1;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--color-dark-bg);
-    --text-color: var(--color-dark-primary);
-    --secondary-color: var(--color-dark-secondary);
-    --tertiary-color: var(--color-dark-tertiary);
-    --divider-color: rgba(255, 255, 255, 0.25);
-  }
-}

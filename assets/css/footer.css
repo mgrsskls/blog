@@ -9,13 +9,10 @@
   letter-spacing: -0.019em;
 }
 
-.Footer-item:not(:last-child) {
-  margin-inline-end: 1rem;
-}
-
 .Footer-item:not(:last-child)::after {
   content: "/";
-  margin-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
+  padding-inline-start: 0.5rem;
 }
 
 .Footer-copy {
