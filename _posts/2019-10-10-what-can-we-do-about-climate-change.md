@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What can we do about climate change?
+description: Some thoughts about what the web development community can do about the climate change
 ---
 
 When following discussions in the web development community, you can read a lot about topics like inclusion, diversity, accessibility and so on. While all these topics are important and should not be missed, I barely read about a topic that concerns me as no other: climate change<!--more-->.

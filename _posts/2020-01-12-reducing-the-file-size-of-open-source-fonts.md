@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Reducing the file size of open source fonts
+description: Removing unused characters from open source fonts can drastically decrease the file size
 ---
 
 I was recently working on the relaunch of my website and wanted to include the open source font [Inter](https://rsms.me/inter/). Unfortunately, even the *woff2* versions of each different font style were at least 100kb large. As I wanted to use three font styles, this was, of course, way too much.<!--more-->

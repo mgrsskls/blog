@@ -7,7 +7,7 @@
     site.title }}{% endif %}
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="stylesheet" href="/assets/styles.css">
@@ -35,4 +35,17 @@
       window.addEventListener("resize", onScroll);
     });
   </script>
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} &#8212; {{ site.title }}{% else %}{{
+    site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://www.mgrossklaus.de/assets/images/me.jpg{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="{% if page.title %}{{ page.title }} &#8212; {{ site.title }}{% else %}{{
+    site.title }}{% endif %}">
+  <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="twitter:site" content="@mgrossklaus">
+  <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}https://www.mgrossklaus.de/assets/images/me.jpg{% endif %}">
+  <meta property="twitter:image:alt" content="Portrait of Michael Großklaus">
 </head>
