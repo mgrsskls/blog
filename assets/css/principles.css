@@ -1,0 +1,6 @@
+@media (min-width: 42em) {
+  .Principles p {
+    column-count: 2;
+    column-gap: 3rem;
+  }
+}
