@@ -9,7 +9,7 @@ layout: compress
   <body id="top">
     <header>
       <a href="/" class="SubTitle">
-        <b>Michael Großklaus</b> <span class="SubTitle-sub">freelance frontend developer</span>
+        <b>Michael Großklaus</b>
       </a>
     </header>
 
@@ -18,7 +18,10 @@ layout: compress
     <main class="Container Container--small">
       <h1 class="MainTitle MainTitle--small">{{ page.title }}</h1>
       <article>
-        <time class="Post-date Date" datetime="{{ page.date | date_to_xmlschema }}">
+        <time
+          class="Post-date Date"
+          datetime="{{ page.date | date_to_xmlschema }}"
+        >
           {{ page.date | date: "%d/%m/%Y" }}
         </time>
 
@@ -26,41 +29,29 @@ layout: compress
           {{ content }}
         </div>
 
-        {% capture the_collection %}{{page.collection}}{% endcapture %}
-        {% if page.collection %}
-          {% assign document = site[the_collection] %}
-        {% endif %}
-        {% for links in document %}
-          {% if links.title == page.title %}
-            {% unless forloop.first %}
-              {% assign nextUrl = next.url %}
-              {% assign nextTitle = next.title %}
-            {% endunless %}
-            {% unless forloop.last %}
-              {% assign prev = document[forloop.index] %}
-              {% assign prevUrl = prev.url %}
-              {% assign prevTitle = prev.title %}
-            {% endunless %}
-          {% endif %}
-          {% assign next = links %}
-        {% endfor %}
-
+        {% capture the_collection %}{{page.collection}}{% endcapture %} {% if
+        page.collection %} {% assign document = site[the_collection] %} {% endif
+        %} {% for links in document %} {% if links.title == page.title %} {%
+        unless forloop.first %} {% assign nextUrl = next.url %} {% assign
+        nextTitle = next.title %} {% endunless %} {% unless forloop.last %} {%
+        assign prev = document[forloop.index] %} {% assign prevUrl = prev.url %}
+        {% assign prevTitle = prev.title %} {% endunless %} {% endif %} {%
+        assign next = links %} {% endfor %}
       </article>
     </main>
 
     <aside class="Container Container--small Pagination">
       <dl class="Pagination-list">
         {% if nextUrl %}
-          <div class="Pagination-item Pagination-item--next">
-            <dt class="Pagination-label">Next article</dt>
-            <dd><a rel="next" href="{{nextUrl}}">{{nextTitle}}</a></dd>
-          </div>
-        {% endif %}
-        {% if prevUrl %}
-          <div class="Pagination-item Pagination-item--prev">
-            <dt class="Pagination-label">Previous article</dt>
-            <dd><a rel="prev" href="{{prevUrl}}">{{prevTitle}}</a></dd>
-          </div>
+        <div class="Pagination-item Pagination-item--next">
+          <dt class="Pagination-label">Next article</dt>
+          <dd><a rel="next" href="{{nextUrl}}">{{nextTitle}}</a></dd>
+        </div>
+        {% endif %} {% if prevUrl %}
+        <div class="Pagination-item Pagination-item--prev">
+          <dt class="Pagination-label">Previous article</dt>
+          <dd><a rel="prev" href="{{prevUrl}}">{{prevTitle}}</a></dd>
+        </div>
         {% endif %}
       </dl>
     </aside>

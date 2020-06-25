@@ -1,7 +1,7 @@
 # Site settings
-title: Michael Großklaus &ndash; Freelance frontend developer
+title: Michael Großklaus &ndash; frontend developer
 email: mail@mgrossklaus.de
-description: "Michael Großklaus is a freelance frontend developer. He writes about html, css, javascript, usability, performance and accessibility."
+description: "Michael Großklaus is a frontend developer and author of miyagi, a node based component development tool for JavaScript template engines."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.mgrossklaus.de"
 username: "mgrossklaus"

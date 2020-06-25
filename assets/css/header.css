@@ -33,12 +33,6 @@ a.SubTitle {
   text-decoration: none;
 }
 
-.SubTitle-sub {
-  color: var(--text-color);
-  display: block;
-  font-size: 1.6rem;
-}
-
 @media (max-width: 42.5em) {
   .MainTitle--small {
     font-size: 3.2rem;
