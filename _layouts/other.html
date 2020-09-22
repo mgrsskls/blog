@@ -7,19 +7,22 @@ layout: compress
   {% include head.html %}
 
   <body id="top">
+    <a class="hidden-visually" href="#content">Skip to main content</a>
     <a href="/" class="SubTitle">
       <b>Michael Großklaus</b>
     </a>
 
     {% include nav.html %}
 
-    <article class="Container Container--small">
-      <h1 class="MainTitle MainTitle--small">{{ page.title }}</h1>
+    <main id="content">
+      <article class="Container Container--small">
+        <h1 class="MainTitle MainTitle--small">{{ page.title }}</h1>
 
-      <div class="Blog-content Copy">
-        {{ content }}
-      </div>
-    </article>
+        <div class="Blog-content Copy">
+          {{ content }}
+        </div>
+      </article>
+    </main>
 
     <div class="Section has-divider Container Container--small">
       {% include footer.html %}
