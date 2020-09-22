@@ -13,6 +13,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-stylelint": "^13.0.0",
     "imagemin-webp": "^6.0.0",
+    "postcss-cli": "^8.0.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
@@ -31,8 +32,5 @@
   "stylelint": {
     "extends": "stylelint-config-standard",
     "ignoreFiles": "build/**"
-  },
-  "dependencies": {
-    "postcss-cli": "^8.0.0"
   }
 }
