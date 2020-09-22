@@ -4,7 +4,7 @@
   "devDependencies": {
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "gulp": "^4.0.2",
@@ -15,8 +15,8 @@
     "imagemin-webp": "^6.0.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.0.5",
-    "stylelint": "^13.6.1",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.1",
     "stylelint-config-standard": "^20.0.0"
   },
   "scripts": {
@@ -33,7 +33,7 @@
     "ignoreFiles": "build/**"
   },
   "dependencies": {
-    "postcss-cli": "^7.1.1",
+    "postcss-cli": "^8.0.0",
     "typing-effect": "^1.1.1"
   }
 }
